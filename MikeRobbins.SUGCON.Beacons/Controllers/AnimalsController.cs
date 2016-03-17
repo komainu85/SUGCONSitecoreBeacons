@@ -1,12 +1,8 @@
-﻿using Sitecore.Mvc.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Sitecore.Mvc.Controllers;
 using Sitecore.Mvc.Presentation;
 
-namespace MikeRobbins.SUGCON.Beacons.Controllers
+namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
 {
     public class AnimalsController: SitecoreController
     {
@@ -16,6 +12,5 @@ namespace MikeRobbins.SUGCON.Beacons.Controllers
          
             return View("/Views/Components/AnimalsCTA.cshtml", datasource.Children);
         }
-
     }
 }
