@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikeRobbins.SUGCON.Beacons.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikeRobbins.SUGCON.Beacons.Kiosk", "MikeRobbins.SUGCON.Beacons.Kiosk\MikeRobbins.SUGCON.Beacons.Kiosk.csproj", "{C41B984E-973D-489C-A517-BA6772688C75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikeRobbins.SUGCON.Beacons.Proxy", "MikeRobbins.SUGCON.Beacons.Proxy\MikeRobbins.SUGCON.Beacons.Proxy.csproj", "{C28A160F-7816-4C8A-9E27-E7617510F4ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,22 @@ Global
 		{C41B984E-973D-489C-A517-BA6772688C75}.Release|x86.ActiveCfg = Release|x86
 		{C41B984E-973D-489C-A517-BA6772688C75}.Release|x86.Build.0 = Release|x86
 		{C41B984E-973D-489C-A517-BA6772688C75}.Release|x86.Deploy.0 = Release|x86
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|x64.Build.0 = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|ARM.Build.0 = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|x64.Build.0 = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{C28A160F-7816-4C8A-9E27-E7617510F4ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
