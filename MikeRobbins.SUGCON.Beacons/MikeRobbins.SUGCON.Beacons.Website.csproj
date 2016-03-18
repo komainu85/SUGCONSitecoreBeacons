@@ -95,7 +95,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AnimalsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="MVCHelpers\Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,7 +133,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Default.cshtml" />
     <Content Include="Views\Components\home.cshtml" />
-    <Content Include="Views\Components\AnimalsCTA.cshtml" />
+    <Content Include="Views\Components\Animal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
