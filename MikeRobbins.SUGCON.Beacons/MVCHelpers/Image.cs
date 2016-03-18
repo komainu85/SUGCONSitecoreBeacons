@@ -15,8 +15,9 @@ namespace MikeRobbins.SUGCON.Beacons.Website.MVCHelpers
 
         public static string GetMediaUrl(this Sitecore.Mvc.Helpers.SitecoreHelper sitecoreHelper, string fieldName, Item item)
         {
-            MediaItem mediaItem = item.Fields[fieldName].Item;
-            return Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem);
+            var mediaField = (Sitecore.Data.Fields.ImageField)item.Fields[fieldName];
+
+            return Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaField.MediaItem);
         }
     }
 }
