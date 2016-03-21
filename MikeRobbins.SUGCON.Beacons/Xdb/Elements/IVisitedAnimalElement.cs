@@ -1,0 +1,12 @@
+﻿using Sitecore.Analytics.Model.Framework;
+using Sitecore.Data;
+
+namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Elements
+{
+    public interface IVisitedAnimalElement: IElement
+    {
+         string AnimalName { get; set; }
+
+         ID Id { get; set; }
+    }
+}
