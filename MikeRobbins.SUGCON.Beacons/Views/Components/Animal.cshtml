@@ -1,0 +1,27 @@
+﻿@using MikeRobbins.SUGCON.Beacons.Website.MVCHelpers
+<div id="workwrap" style="background:url('@Html.Sitecore().GetMediaUrl("Image")') no-repeat center top ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <h4>NEW WEBSITE FOR</h4>
+                <h1>@Html.Sitecore().Field("Title")</h1>
+                <h4>ROLE: LEAD DESIGNER</h4>
+            </div>
+        </div><!-- --/row ---->
+    </div> <!-- /container -->
+</div>
+
+
+<div class="container">
+    <div class="row centered mt mb">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h4>ABOUT @Html.Sitecore().Field("Title")</h4>
+            @Html.Sitecore().Field("Body")
+        </div>
+        <div class="col-lg-10 col-lg-offset-1 mt">
+            <img class="img-responsive" src="assets/img/pr01.jpg">
+            <br>
+            <img class="img-responsive" src="assets/img/pr02.jpg">
+        </div>
+    </div><!-- --/row ---->
+</div>

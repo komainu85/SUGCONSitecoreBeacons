@@ -1,1 +1,30 @@
-﻿
+﻿@using Sitecore.Data.Items
+@using Sitecore.Links
+@model Sitecore.Collections.ChildList
+
+<div id="headerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <h4>Sitecore Beacon Demo Site</h4>
+                <h1>The Zoo</h1>
+                <h4>Mike Robbins</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row centered mt mb">
+        <h1>Our Animals</h1>
+
+        @foreach (Item child in Model)
+        {
+            <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                <a href="@LinkManager.GetItemUrl(child)">@*Create a Model for this stuff*@
+                    @Html.Sitecore().Field("Image", child, new {@class = "img-responsive"})
+                </a>
+            </div>
+        }
+    </div>
+</div>
