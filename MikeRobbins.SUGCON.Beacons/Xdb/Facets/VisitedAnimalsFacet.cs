@@ -10,5 +10,10 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets
         public const string VisitedAnimalsName = "VisitedAnimals";
 
         public IElementCollection<IVisitedAnimalElement> VisitedAnimals => GetCollection<IVisitedAnimalElement>(VisitedAnimalsName);
+
+        public VisitedAnimalsFacet()
+        {
+            EnsureCollection<IVisitedAnimalElement>(VisitedAnimalsName);
+        }
     }
 }

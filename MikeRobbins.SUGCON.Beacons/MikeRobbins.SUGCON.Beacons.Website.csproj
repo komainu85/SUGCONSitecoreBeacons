@@ -49,13 +49,13 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Analytics">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.DataAccess">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.DataAccess.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Model">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Model.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Model.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Kernel.dll</HintPath>
@@ -64,10 +64,10 @@
       <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Services.Client">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Client.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Services.Core">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap, Version=4.1.1.372, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.4.1.1.372\lib\net40\StructureMap.dll</HintPath>
