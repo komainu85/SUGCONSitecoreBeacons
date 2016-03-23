@@ -9,7 +9,11 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets
     {
         public const string VisitedAnimalsName = "VisitedAnimals";
 
-        public IElementCollection<IVisitedAnimalElement> VisitedAnimals => GetCollection<IVisitedAnimalElement>(VisitedAnimalsName);
+        public IElementCollection<IVisitedAnimalElement> VisitedAnimals
+        {
+            get { return GetCollection<IVisitedAnimalElement>(VisitedAnimalsName); }
+            set { SetAttribute(VisitedAnimalsName, value); }
+        }
 
         public VisitedAnimalsFacet()
         {

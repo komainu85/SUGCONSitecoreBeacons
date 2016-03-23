@@ -11,6 +11,8 @@ namespace MikeRobbins.SUGCON.Beacons.Proxy.Controllers
     {
         public ActionResult Index(string redirectUrl)
         {
+            redirectUrl = Server.HtmlEncode(redirectUrl);
+
             var redirectModel = GetRedirectModel(redirectUrl);
 
             return View(redirectModel);

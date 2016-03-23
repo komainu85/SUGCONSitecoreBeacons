@@ -5,11 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using StructureMap;
 using System.Web.Http.Dependencies;
-using IDependencyResolver = System.Web.Http.Dependencies.IDependencyResolver;
 
 namespace MikeRobbins.SUGCON.Beacons.Website.IoC
 {
-    public class StructureMapDependencyResolver : IDependencyResolver
+    public class StructureMapDependencyResolver : System.Web.Mvc.IDependencyResolver
     {
         private readonly IContainer _container;
 
@@ -21,12 +20,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.IoC
             }
             this._container = container;
         }
-
-
-        public void Dispose()
-        {
-            _container.Dispose();
-        }
+        
 
         public object GetService(Type serviceType)
         {
@@ -54,10 +48,6 @@ namespace MikeRobbins.SUGCON.Beacons.Website.IoC
             return _container.GetAllInstances<object>().Where(s => s.GetType() == serviceType);
         }
 
-        public IDependencyScope BeginScope()
-        {
-            IContainer child = _container.GetNestedContainer();
-            return new StructureMapDependencyResolver(child);
-        }
+
     }
 }

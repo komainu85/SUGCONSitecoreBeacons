@@ -59,6 +59,7 @@
     </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Mvc">
       <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Mvc.dll</HintPath>
@@ -127,16 +128,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\StructureMapResolver.cs" />
     <Compile Include="Contracts\IMapper.cs" />
     <Compile Include="Controllers\AnalyticsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IoC\SitecoreDependencyResolver.cs" />
     <Compile Include="IoC\Registry.cs" />
     <Compile Include="IoC\StructureMapDependencyResolver.cs" />
     <Compile Include="Mapper.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="MVCHelpers\Image.cs" />
-    <Compile Include="Pipelines\Initialize\RegisterIoC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Xdb\Facets\IVisitedAnimalsFacet.cs" />
@@ -149,7 +154,10 @@
     <Compile Include="Repositories\XdbFacetRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\ZooConfig.config" />
+    <Content Include="App_Config\Include\ZooConfig.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\font-awesome.min.css" />
     <Content Include="assets\css\style.css" />
@@ -177,6 +185,7 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Global.asax" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="Views\web.config" />
@@ -187,10 +196,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Start\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MikeRobbins.SUGCON.Beacons.Website.Cms\MikeRobbins.SUGCON.Beacons.Website.Cms.csproj">
+      <Project>{099a4f99-f7a5-48e6-9935-84998bcc1da9}</Project>
+      <Name>MikeRobbins.SUGCON.Beacons.Website.Cms</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
