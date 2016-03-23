@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using Sitecore.Cintel.Reporting;
 using Sitecore.Cintel.Reporting.Processors;
 
@@ -8,23 +9,21 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Query
     {
         public override void Process(ReportProcessorArgs args)
         {
-            var result = args.QueryResult;
-            var table = args.ResultTableForView;
-            if (table.Columns.Contains("Id"))
+            DataTable queryResult = args.QueryResult;
+            DataTable resultTableForView = args.ResultTableForView;
+            ProjectRawTableIntoResultTable(args, queryResult, resultTableForView);
+        }
+
+        private void ProjectRawTableIntoResultTable(ReportProcessorArgs args, DataTable rawTable, DataTable resultTable)
+        {
+            foreach (DataRow sourceRow in DataTableExtensions.AsEnumerable(rawTable))
             {
-                foreach (DataRow row in result.AsEnumerable())
-                {
-                    var id = row["VisitedAnimals_Id"];
-                    if (id == null || string.IsNullOrEmpty(id.ToString()))
-                    {
-                        continue;
-                    }
-                    var targetRow = table.NewRow();
-                    targetRow["Id"] = id;
-                    table.Rows.Add(targetRow);
-                }
+                DataRow dataRow = resultTable.NewRow();
+                TryFillData<Guid>(dataRow, new ViewField<Guid>("Id"), sourceRow, "Id");
+                TryFillData<string>(dataRow, new ViewField<string>("AnimalName"), sourceRow, "AnimalName");
+           
+                resultTable.Rows.Add(dataRow);
             }
-            args.ResultSet.Data.Dataset[args.ReportParameters.ViewName] = table;
         }
     }
 }

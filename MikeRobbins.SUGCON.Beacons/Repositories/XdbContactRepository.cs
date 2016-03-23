@@ -61,5 +61,31 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
 
             return contact;
         }
+
+        public Contact FindContact(Guid id, out LockAttemptStatus lockAttemptStatus)
+        {
+            Contact contact = null;
+
+            var loadContact = _contactRepository.TryLoadContact(id,
+                new LeaseOwner("XdbContactRepository", LeaseOwnerType.OutOfRequestWorker),
+                TimeSpan.FromMilliseconds(1000));
+
+            if (loadContact.Status == LockAttemptStatus.Success)
+            {
+                contact = loadContact.Object;
+            }
+
+            lockAttemptStatus = loadContact.Status;
+
+            return contact;
+        }
+
+        public Contact LoadContactReadOnly(Guid id)
+        {
+            Contact contact = _contactRepository.LoadContactReadOnly(id);
+ 
+            return contact;
+        }
+
     }
 }

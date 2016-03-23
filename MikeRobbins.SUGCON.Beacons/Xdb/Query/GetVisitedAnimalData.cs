@@ -20,19 +20,21 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Query
         {
             DataTable queryResultTable = new DataTable();
 
+            queryResultTable.Columns.Add(new DataColumn("Id", typeof (Guid)));
+            queryResultTable.Columns.Add(new DataColumn("AnimalName", typeof(string)));
+
             var xdbFacetRepository = new XdbFacetRepository();
             var xdbContactRepository = new XdbContactRepository(xdbFacetRepository);
 
-            LockAttemptStatus test;
 
-            var contact = xdbContactRepository.FindContact(args.ReportParameters.ContactId.ToString(), out test);
+            var contact = xdbContactRepository.LoadContactReadOnly(args.ReportParameters.ContactId);
 
             var facet = xdbFacetRepository.GetFacet<IZooVisitFacet>(contact, "ZooVisit");
 
             foreach (var animal in facet.VisitedAnimals)
             {
                 DataRow dataRow = queryResultTable.NewRow();
-                dataRow["Id"] = animal.Id;
+                dataRow["Id"] = animal.Id.Guid;
                 dataRow["AnimalName"] = animal.AnimalName;
                 queryResultTable.Rows.Add(dataRow);
             }

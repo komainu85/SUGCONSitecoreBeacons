@@ -1,4 +1,5 @@
-﻿using MikeRobbins.SUGCON.Beacons.Website.Models;
+﻿using System;
+using MikeRobbins.SUGCON.Beacons.Website.Models;
 using Sitecore.Analytics.DataAccess;
 using Sitecore.Analytics.Tracking;
 
@@ -9,5 +10,9 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Contracts
         Contact CreateContact(Person person);
         void UpdateContact(Contact contact, Person person);
         Contact FindContact(string identifier, out LockAttemptStatus lockAttemptStatus);
+
+        Contact FindContact(Guid id, out LockAttemptStatus lockAttemptStatus);
+
+        Contact LoadContactReadOnly(Guid id);
     }
 }
