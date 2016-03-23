@@ -17,9 +17,9 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
 
         public void UpdateAnimalFacet(Contact contact, Animal animal)
         {
-            var visitedAnimals = GetFacet<IVisitedAnimalsFacet>(contact, "VisitedAnimals");
+            var zooVisitFacet = GetFacet<IZooVisitFacet>(contact, "ZooVisit");
 
-            var visitedAnimal = visitedAnimals.VisitedAnimals.Create();
+            var visitedAnimal = zooVisitFacet.VisitedAnimals.Create();
 
             visitedAnimal.AnimalName = animal.Name;
             visitedAnimal.Id = animal.Id;

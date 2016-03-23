@@ -5,7 +5,7 @@ using Sitecore.Analytics.Model.Framework;
 namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets
 {
     [Serializable]
-    public class VisitedAnimalsFacet : Facet, IVisitedAnimalsFacet
+    public class ZooVisitFacet : Facet, IZooVisitFacet
     {
         public const string VisitedAnimalsName = "VisitedAnimals";
 
@@ -15,7 +15,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets
             set { SetAttribute(VisitedAnimalsName, value); }
         }
 
-        public VisitedAnimalsFacet()
+        public ZooVisitFacet()
         {
             EnsureCollection<IVisitedAnimalElement>(VisitedAnimalsName);
         }

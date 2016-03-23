@@ -48,6 +48,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MikeRobbins.SUGCON.Beacons\Bin\Sitecore.Analytics.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Cintel">
       <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Cintel.dll</HintPath>
     </Reference>
@@ -73,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="sitecore\shell\client\Applications\ExperienceProfile\Contact\VisitedAnimals\VisitedAnimalsTab.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstructVisitedAnimalsDataTable.cs" />
