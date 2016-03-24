@@ -12,7 +12,7 @@
               $('.sc-progressindicator').first().show().hide();
               var contactId = cintelUtil.getQueryParam(cidParam);
               var tableName = "";
-              var baseUrl = "/sitecore/api/ao/v1/contacts/" + contactId + "/intel/visitedanimals";
+              var baseUrl = "/sitecore/api/ao/v1/contacts/" + contactId + intelPath +"/visitedanimals";
 
               providerHelper.initProvider(this.VisitedAnimalsDataProvider,
                 tableName,
@@ -23,13 +23,12 @@
                 $.proxy(function (jsonData) {
                     var dataSetProperty = "Data";
                     if (jsonData.data.dataSet != null && jsonData.data.dataSet.visitedanimals.length > 0) {
-                        var dataSet = jsonData.data.dataSet.visitedanimals[0];
+                        var dataSet = jsonData.data.dataSet.visitedanimals;
                         this.VisitedAnimalsDataProvider.set(dataSetProperty, jsonData);
-                        this.AnimalIdValue.set("text", dataSet.Id);
-                        //this.AnimalNameValue.set("text", dataSet.Name);
+                        this.VistedAnimalsList.viewModel.items(dataSet);
                     } else {
-                        this.EmployeeIdLabel.set("isVisible", false);
-                        this.ExternalDataTabMessageBar.addMessage("notification", this.NoEmployeeData.get("text"));
+                        this.AnimalIdLabel.set("isVisible", false);
+                        this.ExternalDataTabMessageBar.addMessage("notification", this.NoAnimalData.get("text"));
                     }
                 }, this));
           }

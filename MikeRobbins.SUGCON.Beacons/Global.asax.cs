@@ -12,7 +12,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website
 
         protected void Application_Start(object sender, EventArgs e)
         {
-          App_Start.StructureMapResolver.Initialize();
+          StructureMapResolver.Initialize();
         }
     }
 }
