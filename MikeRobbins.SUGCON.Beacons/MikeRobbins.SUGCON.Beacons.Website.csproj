@@ -59,7 +59,7 @@
     </Reference>
     <Reference Include="Sitecore.Cintel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Cintel.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Cintel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Kernel.dll</HintPath>
