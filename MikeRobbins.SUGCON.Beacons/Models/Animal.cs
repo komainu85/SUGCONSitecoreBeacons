@@ -11,5 +11,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Models
         public string Name { get; set; }
 
         public ID Id { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }

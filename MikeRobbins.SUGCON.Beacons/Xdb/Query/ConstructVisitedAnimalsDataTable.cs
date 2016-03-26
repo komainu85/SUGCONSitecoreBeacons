@@ -12,6 +12,8 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Query
             args.ResultTableForView = new DataTable();
             args.ResultTableForView.Columns.Add(new ViewField<Guid>("Id").ToColumn());
             args.ResultTableForView.Columns.Add(new ViewField<string>("AnimalName").ToColumn());
+            args.ResultTableForView.Columns.Add(new ViewField<DateTime>("Date").ToColumn());
+
         }
     }
 }

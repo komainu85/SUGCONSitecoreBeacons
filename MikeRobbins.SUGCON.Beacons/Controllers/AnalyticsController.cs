@@ -41,7 +41,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
             var animalName = Sitecore.Context.Item["Title"];
             var animalId = Sitecore.Context.Item.ID;
 
-            var animal = new Animal() {Id = animalId, Name = animalName};
+            var animal = new Animal() { Id = animalId, Name = animalName, Date = DateTime.Now };
 
             _xdbFacetRepository.UpdateAnimalFacet(Tracker.Current.Contact, animal);
         }

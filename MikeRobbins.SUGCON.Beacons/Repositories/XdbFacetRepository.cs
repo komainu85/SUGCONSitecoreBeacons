@@ -23,6 +23,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
 
             visitedAnimal.AnimalName = animal.Name;
             visitedAnimal.Id = animal.Id;
+            visitedAnimal.Date = animal.Date;
         }
 
         public void UpdatePersonalInfo(Person person, ref Contact contact)

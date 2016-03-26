@@ -1,4 +1,5 @@
-﻿using Sitecore.Analytics.Model.Framework;
+﻿using System;
+using Sitecore.Analytics.Model.Framework;
 using Sitecore.Data;
 
 namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Elements
@@ -28,10 +29,23 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Elements
             }
         }
 
+        public DateTime Date
+        {
+            get
+            {
+                return this.GetAttribute<DateTime>("Date");
+            }
+            set
+            {
+                this.SetAttribute<DateTime>("Date", value);
+            }
+        }
+
         public VisitedAnimalElement()
         {
             this.EnsureAttribute<string>("AnimalName");
             this.EnsureAttribute<ID>("Id");
+            this.EnsureAttribute<DateTime>("Date");
         }
     }
 }

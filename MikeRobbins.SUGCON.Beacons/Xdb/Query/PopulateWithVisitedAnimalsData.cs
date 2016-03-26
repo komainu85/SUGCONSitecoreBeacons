@@ -21,7 +21,8 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Xdb.Query
                 DataRow dataRow = resultTable.NewRow();
                 TryFillData<Guid>(dataRow, new ViewField<Guid>("Id"), sourceRow, "Id");
                 TryFillData<string>(dataRow, new ViewField<string>("AnimalName"), sourceRow, "AnimalName");
-           
+                TryFillData<DateTime>(dataRow, new ViewField<DateTime>("Date"), sourceRow, "Date");
+
                 resultTable.Rows.Add(dataRow);
             }
         }
