@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {AAA0E4EA-4907-4176-AD9D-A72285F20651}
+database: master
+path: /sitecore/content/Home/Our Animals/Eagle Owl
+parent: {BC0F2FF1-4193-4AE1-8677-BC520E9A152A}
+name: Eagle Owl
+master: {00000000-0000-0000-0000-000000000000}
+template: {E629A74C-9463-4611-A224-B240E74F9F8A}
+templatekey: Animal
+
+----version----
+language: en
+version: 1
+revision: 0be222a6-7247-4c01-94eb-3299f72c8405
+
+----field----
+field: {AC9D32E5-CA8A-4C8C-8700-670043B1D39C}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{3D2A2B36-4103-4210-9893-B8C342FA56D9}" />
+----field----
+field: {BA90E4AC-CF99-4AD1-A80D-47DF846FDF3E}
+name: Title
+key: title
+content-length: 9
+
+Eagle Owl
+----field----
+field: {FD88B15E-4EAC-417B-87B1-CE2E858284D5}
+name: Body
+key: body
+content-length: 2471
+
+<span style="color: #252525; background-color: #ffffff;">The&nbsp;</span><a href="https://en.wikipedia.org/wiki/Americas" title="Americas" style="color: #0b0080; background: none #ffffff;">American</a><span style="color: #252525; background-color: #ffffff;">&nbsp;(North and South America)&nbsp;</span><strong style="color: #252525; background-color: #ffffff;">horned owls</strong><span style="color: #252525; background-color: #ffffff;">&nbsp;and the&nbsp;</span><a href="https://en.wikipedia.org/wiki/Old_World" title="Old World" style="color: #0b0080; background: none #ffffff;">Old World</a><span style="color: #252525; background-color: #ffffff;">&nbsp;</span><strong style="color: #252525; background-color: #ffffff;">eagle-owls</strong><span style="color: #252525; background-color: #ffffff;">&nbsp;make up the&nbsp;</span><a href="https://en.wikipedia.org/wiki/Genus" title="Genus" style="color: #0b0080; background: none #ffffff;">genus</a><span style="color: #252525; background-color: #ffffff;">&nbsp;</span><em style="color: #252525; background-color: #ffffff;"><strong>Bubo</strong></em><span style="color: #252525; background-color: #ffffff;">, at least as traditionally described. This genus, depending on definition, contains about one or two dozen&nbsp;</span><a href="https://en.wikipedia.org/wiki/Species" title="Species" style="color: #0b0080; background: none #ffffff;">species</a><span style="color: #252525; background-color: #ffffff;">&nbsp;of&nbsp;</span><a href="https://en.wikipedia.org/wiki/Typical_owl" title="Typical owl" class="mw-redirect" style="color: #0b0080; background: none #ffffff;">typical owls</a><span style="color: #252525; background-color: #ffffff;">&nbsp;(</span><a href="https://en.wikipedia.org/wiki/Family_(biology)" title="Family (biology)" style="color: #0b0080; background: none #ffffff;">family</a><span style="color: #252525; background-color: #ffffff;">Strigidae) and is found in many parts of the world. Some of the largest living&nbsp;</span><a href="https://en.wikipedia.org/wiki/Strigiformes" title="Strigiformes" class="mw-redirect" style="color: #0b0080; background: none #ffffff;">Strigiformes</a><span style="color: #252525; background-color: #ffffff;">&nbsp;are in&nbsp;</span><em style="color: #252525; background-color: #ffffff;">Bubo</em><span style="color: #252525; background-color: #ffffff;">. Traditionally, only owls with ear-tufts were included in this genus, but that is no longer the case.</span>
+----field----
+field: {7F0507E5-DA6C-40CC-9629-04792F44451F}
+name: Navigation Title
+key: navigation title
+content-length: 9
+
+Eagle Owl
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160316T131115Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0be222a6-7247-4c01-94eb-3299f72c8405
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160317T181133Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

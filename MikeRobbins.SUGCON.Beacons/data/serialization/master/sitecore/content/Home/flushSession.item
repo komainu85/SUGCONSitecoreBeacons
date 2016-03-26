@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {B0DC2E00-6D28-4743-95F7-19F6B5CE78BC}
+database: master
+path: /sitecore/content/Home/flushSession
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: flushSession
+master: {00000000-0000-0000-0000-000000000000}
+template: {1A67535E-E9C4-4977-9969-F6ABFCCC85ED}
+templatekey: Standard Page
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 254
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{40A07C33-8AB6-4930-85F0-CC7C28CF2277}"><r id="{81EC5988-628E-4588-90AC-4F4650D66FCF}" ph="content" uid="{EF29F4DA-CD90-44F9-A59D-1C03C1079188}" /></d></r>
+----version----
+language: en
+version: 1
+revision: bc67157b-ad3c-4b5f-8c79-4a13a42d92cd
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160316T130825Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bc67157b-ad3c-4b5f-8c79-4a13a42d92cd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160326T190503Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

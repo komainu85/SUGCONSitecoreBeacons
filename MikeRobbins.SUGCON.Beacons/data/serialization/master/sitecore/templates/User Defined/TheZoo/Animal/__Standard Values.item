@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {6E3150C8-C677-4B4B-B42B-2DD61626E25E}
+database: master
+path: /sitecore/templates/User Defined/TheZoo/Animal/__Standard Values
+parent: {E629A74C-9463-4611-A224-B240E74F9F8A}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {E629A74C-9463-4611-A224-B240E74F9F8A}
+templatekey: Animal
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 374
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{40A07C33-8AB6-4930-85F0-CC7C28CF2277}"><r id="{2627F907-1A57-4C67-A810-F2E385558757}" ph="content" uid="{E8303661-AA4C-4B18-A6FD-6B1C4712EA7E}" /><r ds="" id="{54C5C82E-9BF2-4B31-8363-C3C7A3C3D818}" par="" ph="content" uid="{7403C82E-FC0D-4532-BB87-032B363BE78D}" /></d></r>
+----version----
+language: en
+version: 1
+revision: b809765c-c1d0-4b7d-8642-2a71b5271ef7
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160316T130923Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b809765c-c1d0-4b7d-8642-2a71b5271ef7
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160321T132822Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

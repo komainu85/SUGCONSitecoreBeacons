@@ -1,0 +1,76 @@
+----item----
+version: 1
+id: {EBF7E960-6ACD-4C60-810E-1895F210FDEA}
+database: master
+path: /sitecore/content/Home/Our Animals/Snow Leopard
+parent: {BC0F2FF1-4193-4AE1-8677-BC520E9A152A}
+name: Snow Leopard
+master: {00000000-0000-0000-0000-000000000000}
+template: {E629A74C-9463-4611-A224-B240E74F9F8A}
+templatekey: Animal
+
+----version----
+language: en
+version: 1
+revision: 4ec34105-ff39-4100-8c3c-4cdc4e87642d
+
+----field----
+field: {AC9D32E5-CA8A-4C8C-8700-670043B1D39C}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{672B111C-1995-43CA-B10A-D01CB77274AE}" />
+----field----
+field: {BA90E4AC-CF99-4AD1-A80D-47DF846FDF3E}
+name: Title
+key: title
+content-length: 12
+
+Snow Leopard
+----field----
+field: {FD88B15E-4EAC-417B-87B1-CE2E858284D5}
+name: Body
+key: body
+content-length: 5105
+
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">The&nbsp;<strong>snow leopard</strong>&nbsp;(<em><a href="https://en.wikipedia.org/wiki/Panthera" title="Panthera" style="color: #0b0080; background: none;">Panthera</a>&nbsp;uncia</em>&nbsp;<a href="https://en.wikipedia.org/wiki/Syn." title="Syn." class="mw-redirect" style="color: #0b0080; background: none;">syn.</a>&nbsp;<em>Uncia uncia</em>) is a large&nbsp;<a href="https://en.wikipedia.org/wiki/Felidae" title="Felidae" style="color: #0b0080; background: none;">cat</a>&nbsp;native to the mountain ranges of&nbsp;<a href="https://en.wikipedia.org/wiki/Central_Asia" title="Central Asia" style="color: #0b0080; background: none;">Central</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/South_Asia" title="South Asia" style="color: #0b0080; background: none;">South Asia</a>. It is listed as&nbsp;<a href="https://en.wikipedia.org/wiki/Endangered_species" title="Endangered species" style="color: #0b0080; background: none;">endangered</a>&nbsp;on the&nbsp;<a href="https://en.wikipedia.org/wiki/IUCN_Red_List_of_Threatened_Species" title="IUCN Red List of Threatened Species" class="mw-redirect" style="color: #0b0080; background: none;">IUCN Red List of Threatened Species</a>&nbsp;because, as of 2003, the size of the global population was estimated at 4,080&ndash;6,590 adults, of which fewer than 2,500 individuals may reproduce in the wild.<sup id="cite_ref-iucn_1-1" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-iucn-1" style="color: #0b0080; background: none;">[1]</a></sup></p>
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">Drawing from the latest available data, the Global Snow Leopard and Eco-System Protection Program (GSLEP)<sup id="cite_ref-3" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-3" style="color: #0b0080; background: none;">[3]</a></sup>&nbsp;uses an estimate of between 3,920 and 6,390 individuals in the wild.</p>
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">Snow leopards inhabit&nbsp;<a href="https://en.wikipedia.org/wiki/Alpine_climate" title="Alpine climate" style="color: #0b0080; background: none;">alpine</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/Subalpine_zone" title="Subalpine zone" class="mw-redirect" style="color: #0b0080; background: none;">subalpine</a>&nbsp;zones at elevations from 3,000 to 4,500&nbsp;m (9,800 to 14,800&nbsp;ft). In the northern range countries, they also occur at lower elevations.<sup id="cite_ref-McCarthy2003_4-0" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-McCarthy2003-4" style="color: #0b0080; background: none;">[4]</a></sup></p>
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;"><a href="https://en.wikipedia.org/wiki/Taxonomy_(biology)" title="Taxonomy (biology)" style="color: #0b0080; background: none;">Taxonomically</a>, the snow leopard was classified as&nbsp;<em>Uncia uncia</em>&nbsp;since the early 1930s.<sup id="cite_ref-msw3_2-1" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-msw3-2" style="color: #0b0080; background: none;">[2]</a></sup>&nbsp;Based on&nbsp;<a href="https://en.wikipedia.org/wiki/Genotyping" title="Genotyping" style="color: #0b0080; background: none;">genotyping</a>&nbsp;studies, the cat has been considered a member of the&nbsp;<a href="https://en.wikipedia.org/wiki/Genus_(biology)" title="Genus (biology)" class="mw-redirect" style="color: #0b0080; background: none;">genus</a>&nbsp;<em><a href="https://en.wikipedia.org/wiki/Panthera" title="Panthera" style="color: #0b0080; background: none;">Panthera</a></em>&nbsp;since 2008.<sup id="cite_ref-iucn_1-2" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-iucn-1" style="color: #0b0080; background: none;">[1]</a></sup><sup id="cite_ref-Janecka2008_5-0" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-Janecka2008-5" style="color: #0b0080; background: none;">[5]</a></sup>&nbsp;Two subspecies have been attributed, but genetic differences between the two have not been settled.<sup id="cite_ref-iucn_1-3" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-iucn-1" style="color: #0b0080; background: none;">[1]</a></sup></p>
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">The snow leopard is the&nbsp;<a href="https://en.wikipedia.org/wiki/List_of_national_animals" title="List of national animals" style="color: #0b0080; background: none;">National Heritage Animal</a>&nbsp;of&nbsp;<a href="https://en.wikipedia.org/wiki/Afghanistan" title="Afghanistan" style="color: #0b0080; background: none;">Afghanistan</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/Pakistan" title="Pakistan" style="color: #0b0080; background: none;">Pakistan</a>.<sup id="cite_ref-6" class="reference"><a href="https://en.wikipedia.org/wiki/Snow_leopard#cite_note-6" style="color: #0b0080; background: none;">[6]</a></sup></p>
+----field----
+field: {7F0507E5-DA6C-40CC-9629-04792F44451F}
+name: Navigation Title
+key: navigation title
+content-length: 12
+
+Snow Leopard
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160316T131043Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4ec34105-ff39-4100-8c3c-4cdc4e87642d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160317T181250Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

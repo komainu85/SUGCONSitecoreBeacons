@@ -1,0 +1,74 @@
+----item----
+version: 1
+id: {59D2D69D-8D86-4DBA-9FB4-250200F727A3}
+database: master
+path: /sitecore/content/Home/Our Animals/Giant Panda
+parent: {BC0F2FF1-4193-4AE1-8677-BC520E9A152A}
+name: Giant Panda
+master: {00000000-0000-0000-0000-000000000000}
+template: {E629A74C-9463-4611-A224-B240E74F9F8A}
+templatekey: Animal
+
+----version----
+language: en
+version: 1
+revision: c5d1ec70-d628-4ed5-8391-9728dcd1d32b
+
+----field----
+field: {AC9D32E5-CA8A-4C8C-8700-670043B1D39C}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{D40C5AFA-0BF6-4CE8-A7A4-186BA7736C96}" />
+----field----
+field: {BA90E4AC-CF99-4AD1-A80D-47DF846FDF3E}
+name: Title
+key: title
+content-length: 11
+
+Giant Panda
+----field----
+field: {FD88B15E-4EAC-417B-87B1-CE2E858284D5}
+name: Body
+key: body
+content-length: 7368
+
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">The&nbsp;<strong>giant panda</strong>&nbsp;(<em>Ailuropoda melanoleuca</em>,&nbsp;<small>lit.</small>&nbsp;"black and white cat-foot";&nbsp;<a href="https://en.wikipedia.org/wiki/Simplified_Chinese_characters" title="Simplified Chinese characters" style="color: #0b0080; background: none;">simplified Chinese</a>:&nbsp;<span>大熊猫</span>;&nbsp;<a href="https://en.wikipedia.org/wiki/Traditional_Chinese_characters" title="Traditional Chinese characters" style="color: #0b0080; background: none;">traditional Chinese</a>:<span>大熊貓</span>;&nbsp;<a href="https://en.wikipedia.org/wiki/Pinyin" title="Pinyin" style="color: #0b0080; background: none;">pinyin</a>:&nbsp;<em><span>d&agrave; xi&oacute;ng māo</span></em>,&nbsp;<small>lit.</small>&nbsp;"big bear cat"),<sup id="cite_ref-Scheff_Duncan_2-0" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-Scheff_Duncan-2" style="color: #0b0080; background: none;">[2]</a></sup>&nbsp;also known as&nbsp;<strong>panda bear</strong>&nbsp;or simply&nbsp;<strong>panda</strong>, is a&nbsp;<a href="https://en.wikipedia.org/wiki/Bear" title="Bear" style="color: #0b0080; background: none;">bear</a><sup id="cite_ref-Lindburg.2C_Donald_G..3B_Baragona.2C_Karen_2004_3-0" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-Lindburg.2C_Donald_G..3B_Baragona.2C_Karen_2004-3" style="color: #0b0080; background: none;">[3]</a></sup>&nbsp;native to south central&nbsp;<a href="https://en.wikipedia.org/wiki/China" title="China" style="color: #0b0080; background: none;">China</a>.<sup id="cite_ref-iucn_1-1" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-iucn-1" style="color: #0b0080; background: none;">[1]</a></sup>&nbsp;It is easily recognized by the large, distinctive black patches around its eyes, over the ears, and across its round body. The name "giant panda" is sometimes used to distinguish it from the unrelated&nbsp;<a href="https://en.wikipedia.org/wiki/Red_panda" title="Red panda" style="color: #0b0080; background: none;">red panda</a>. Though it belongs to the order&nbsp;<a href="https://en.wikipedia.org/wiki/Carnivora" title="Carnivora" style="color: #0b0080; background: none;">Carnivora</a>, the giant panda's diet is over 99%&nbsp;<a href="https://en.wikipedia.org/wiki/Bamboo" title="Bamboo" style="color: #0b0080; background: none;">bamboo</a>.<sup id="cite_ref-4" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-4" style="color: #0b0080; background: none;">[4]</a></sup>&nbsp;Giant pandas in the wild will occasionally eat other grasses, wild tubers, or even meat in the form of birds, rodents or carrion. In captivity, they may receive honey, eggs, fish, yams,&nbsp;<a href="https://en.wikipedia.org/wiki/Shrub" title="Shrub" style="color: #0b0080; background: none;">shrub leaves</a>, oranges, or bananas along with specially prepared food.<sup id="cite_ref-5" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-5" style="color: #0b0080; background: none;">[5]</a></sup><sup id="cite_ref-6" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-6" style="color: #0b0080; background: none;">[6]</a></sup></p>
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">The giant panda lives in a few mountain ranges in central China, mainly in&nbsp;<a href="https://en.wikipedia.org/wiki/Sichuan" title="Sichuan" style="color: #0b0080; background: none;">Sichuan</a>&nbsp;province, but also in neighbouring provinces, namely&nbsp;<a href="https://en.wikipedia.org/wiki/Shaanxi" title="Shaanxi" style="color: #0b0080; background: none;">Shaanxi</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/Gansu" title="Gansu" style="color: #0b0080; background: none;">Gansu</a>.<sup id="cite_ref-7" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-7" style="color: #0b0080; background: none;">[7]</a></sup>&nbsp;As a result of farming,&nbsp;<a href="https://en.wikipedia.org/wiki/Deforestation" title="Deforestation" style="color: #0b0080; background: none;">deforestation</a>, and other development, the giant panda has been driven out of the lowland areas where it once lived.</p>
+<p style="color: #252525; margin: 0.5em 0px; background-color: #ffffff;">The giant panda is a&nbsp;<a href="https://en.wikipedia.org/wiki/Conservation_reliant_species" title="Conservation reliant species" class="mw-redirect" style="color: #0b0080; background: none;">conservation reliant</a>&nbsp;<a href="https://en.wikipedia.org/wiki/Endangered_species" title="Endangered species" style="color: #0b0080; background: none;">endangered species</a>.<sup id="cite_ref-wwf1_8-0" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-wwf1-8" style="color: #0b0080; background: none;">[8]</a></sup>&nbsp;A 2007 report shows 239 pandas living in captivity inside China and another 27 outside the country.<sup id="cite_ref-Xinhua1_9-0" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-Xinhua1-9" style="color: #0b0080; background: none;">[9]</a></sup>&nbsp;As of December 2014, 49 giant pandas live in captivity outside China, living in 18 zoos in 13 different countries.<sup id="cite_ref-10" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-10" style="color: #0b0080; background: none;">[10]</a></sup>&nbsp;Wild population estimates vary; one estimate shows that there are about 1,590 individuals living in the wild,<sup id="cite_ref-Xinhua1_9-1" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-Xinhua1-9" style="color: #0b0080; background: none;">[9]</a></sup>&nbsp;while a 2006 study via&nbsp;<a href="https://en.wikipedia.org/wiki/Genetic_fingerprinting" title="Genetic fingerprinting" class="mw-redirect" style="color: #0b0080; background: none;">DNA analysis</a>&nbsp;estimated that this figure could be as high as 2,000 to 3,000.<sup id="cite_ref-BBC_06-07_11-0" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-BBC_06-07-11" style="color: #0b0080; background: none;">[11]</a></sup>&nbsp;Some reports also show that the number of giant pandas in the wild is on the rise.<sup id="cite_ref-pandasinc_12-0" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-pandasinc-12" style="color: #0b0080; background: none;">[12]</a></sup>&nbsp;In March 2015,&nbsp;<a href="https://en.wikipedia.org/wiki/Mongabay" title="Mongabay" style="color: #0b0080; background: none;">Mongabay</a>&nbsp;stated the wild giant panda population increased by 268, or 16.8%, totaling to 1,864 individuals.<sup id="cite_ref-13" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-13" style="color: #0b0080; background: none;">[13]</a></sup>&nbsp;However, the&nbsp;<a href="https://en.wikipedia.org/wiki/IUCN" title="IUCN" class="mw-redirect" style="color: #0b0080; background: none;">IUCN</a>&nbsp;does not believe there is enough certainty yet to reclassify the species from endangered to vulnerable.<sup id="cite_ref-iucn_1-2" class="reference"><a href="https://en.wikipedia.org/wiki/Giant_panda#cite_note-iucn-1" style="color: #0b0080; background: none;">[1]</a></sup></p>
+----field----
+field: {7F0507E5-DA6C-40CC-9629-04792F44451F}
+name: Navigation Title
+key: navigation title
+content-length: 11
+
+Giant Panda
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160316T131008Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c5d1ec70-d628-4ed5-8391-9728dcd1d32b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160317T181228Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

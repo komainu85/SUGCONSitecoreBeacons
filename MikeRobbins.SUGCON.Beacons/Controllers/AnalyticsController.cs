@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using MikeRobbins.SUGCON.Beacons.Website.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.Models;
 using Sitecore.Analytics;
+using Sitecore.Analytics.Model.Entities;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Mvc.Controllers;
