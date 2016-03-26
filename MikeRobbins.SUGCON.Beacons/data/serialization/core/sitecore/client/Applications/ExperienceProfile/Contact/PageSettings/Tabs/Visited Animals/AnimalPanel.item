@@ -1,0 +1,76 @@
+----item----
+version: 1
+id: {EE4345CB-56C1-4263-95A2-D7B649E9AE99}
+database: core
+path: /sitecore/client/Applications/ExperienceProfile/Contact/PageSettings/Tabs/Visited Animals/AnimalPanel
+parent: {7C34FDD8-6069-4C15-ADF2-4754C35E804F}
+name: AnimalPanel
+master: {00000000-0000-0000-0000-000000000000}
+template: {F62B4CD7-754C-4461-810F-2B6BD2C92A0D}
+templatekey: Tab
+
+----field----
+field: {DEAB3795-056F-4421-ADF0-758844461B72}
+name: Placeholder Name
+key: placeholder name
+content-length: 11
+
+AnimalPanel
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 1784
+
+<r>
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{759BEFD1-3323-404D-A243-E0ED81163C03}">
+    <r id="{CB83D434-31ED-4AC3-A280-CCE2B63F9743}" par="PageCodeScriptFileName=%2fsitecore%2fshell%2fclient%2fApplications%2fExperienceProfile%2fContact%2fVisitedAnimals%2fVisitedAnimalsTab.js" ph="Page.Body" uid="{A7109207-1306-4165-9C9D-DBD73FB95CEE}" />
+    <r id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}" par="Id=VisitedAnimalsDataTabBorder" ph="Page.Body" uid="{38F08352-ADCE-43D4-BF33-1E669A7C7549}" />
+    <r id="{910155C7-3881-4A56-90FB-D126490EDE55}" par="Id=ExternalDataTabMessageBar" ph="Page.Body" uid="{F1226AAB-7DB0-43DB-B3E1-F19A79D1D63C}" />
+    <r id="{7717EB6C-9F90-4C58-826D-5E87722A0318}" par="Id=NoAnimalData&amp;IsVisible=0&amp;Text=No+animal+data+found" ph="VisitedAnimalsDataTabBorder.Content" uid="{3730A081-249E-4475-A165-9B6EAC776B8F}" />
+    <r id="{A91523CD-6E56-4F08-8B21-C39018E0134A}" par="Id=VisitedAnimalsDataProvider" ph="VisitedAnimalsDataTabBorder.Content" uid="{2C578C40-4AC7-4AAE-8E36-3769C58AF9E9}" />
+    <r id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}" par="Id=AnimalsBorder" ph="VisitedAnimalsDataTabBorder.Content" uid="{1A2C5389-2489-488D-A0F3-C60EF72A5448}" />
+    <r ds="{41C4FA57-618A-4043-9FF5-05975AC7A9B2}" id="{442BD093-FBAD-4E36-BC08-489E16C82D08}" par="Id=VisitedAnimalsAccordion" ph="AnimalsBorder.Content" uid="{8D2CE524-6928-46B5-BDF3-A76F08890AA7}" />
+    <r ds="{784560C3-0319-42AF-BFAE-CBC812D8947D}" id="{ACE0AFD6-3DE0-42CF-8E62-4E68CD810A8D}" par="Id=VistedAnimalsList&amp;TileHtmlFileName=%2fsitecore%2fshell%2fclient%2fBusiness+Component+Library%2fLayouts%2fRenderings%2fListsAndGrids%2fListControls%2fDefaultTile.cshtml" ph="VisitedAnimalsAccordion.Body" uid="{41734D90-8863-4E25-8613-8D067F77F977}" />
+  </d>
+</r>
+----version----
+language: en
+version: 1
+revision: 91728c53-6038-440f-8443-dadf2f94ab9b
+
+----field----
+field: {AEA872FB-AA91-4D1A-B877-3CA6FBBB4FD4}
+name: Header
+key: header
+content-length: 11
+
+AnimalPanel
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160323T125751Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+91728c53-6038-440f-8443-dadf2f94ab9b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160324T133510Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -190,6 +190,16 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel\NoDataFound.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel\VisitedAnimals.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel\VisitedAnimalsDataAccordion.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel\VisitedAnimals\AnimalName.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel\VisitedAnimals\Date.item" />
+    <Content Include="data\serialization\core\sitecore\client\Applications\ExperienceProfile\Contact\PageSettings\Tabs\Visited Animals\AnimalPanel\VisitedAnimals\Id.item" />
+    <Content Include="data\serialization\master\sitecore\system\Marketing Control Panel\Campaigns\Bluetooth Beacons.item" />
+    <Content Include="data\serialization\master\sitecore\system\Marketing Control Panel\Campaigns\Bluetooth Beacons\Animal Visitor.item" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Global.asax" />
