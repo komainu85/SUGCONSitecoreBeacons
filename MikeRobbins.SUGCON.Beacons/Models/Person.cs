@@ -13,5 +13,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Models
         public string FirstName { get; set; }
 
         public string Surname { get; set; }
+
+        public List<Animal> Animals { get; set; } = new List<Animal>();
     }
 }

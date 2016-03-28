@@ -9,10 +9,10 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Contracts
     {
         Contact CreateContact(Person person);
         void UpdateContact(Contact contact, Person person);
+        void GetContacts();
         Contact FindContact(string identifier, out LockAttemptStatus lockAttemptStatus);
-
         Contact FindContact(Guid id, out LockAttemptStatus lockAttemptStatus);
-
         Contact LoadContactReadOnly(Guid id);
+        Contact LoadContactReadOnly(string identifier);
     }
 }

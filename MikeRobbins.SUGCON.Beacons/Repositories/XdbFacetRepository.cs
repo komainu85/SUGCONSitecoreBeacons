@@ -1,6 +1,5 @@
 ﻿using MikeRobbins.SUGCON.Beacons.Website.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.Models;
-using MikeRobbins.SUGCON.Beacons.Website.Xdb.Elements;
 using MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets;
 using Sitecore.Analytics.Model.Entities;
 using Sitecore.Analytics.Model.Framework;

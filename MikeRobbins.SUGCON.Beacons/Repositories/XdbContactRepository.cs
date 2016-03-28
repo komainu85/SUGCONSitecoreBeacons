@@ -33,15 +33,17 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
             return contact;
         }
 
-        private void SaveContact(Contact contact)
-        {
-            _contactRepository.SaveContact(contact, new ContactSaveOptions(true, new LeaseOwner("Person Respository", LeaseOwnerType.OutOfRequestWorker)));
-        }
-
         public void UpdateContact(Contact contact, Person person)
         {
             _xdbFacetRepository.UpdatePersonalInfo(person, ref contact);
             SaveContact(contact);
+        }
+
+        public void GetContacts()
+        {
+
+
+
         }
 
         public Contact FindContact(string identifier, out LockAttemptStatus lockAttemptStatus)
@@ -82,9 +84,21 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
 
         public Contact LoadContactReadOnly(Guid id)
         {
-            Contact contact = _contactRepository.LoadContactReadOnly(id);
- 
+            var contact = _contactRepository.LoadContactReadOnly(id);
+
             return contact;
+        }
+
+        public Contact LoadContactReadOnly(string identifier)
+        {
+            var contact = _contactRepository.LoadContactReadOnly(identifier);
+
+            return contact;
+        }
+
+        private void SaveContact(Contact contact)
+        {
+            _contactRepository.SaveContact(contact, new ContactSaveOptions(true, new LeaseOwner("Person Respository", LeaseOwnerType.OutOfRequestWorker)));
         }
 
     }

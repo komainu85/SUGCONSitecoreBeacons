@@ -5,6 +5,8 @@ using System.Web;
 using MikeRobbins.SUGCON.Beacons.Website.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.Models;
 using MikeRobbins.SUGCON.Beacons.Website.Xdb;
+using MikeRobbins.SUGCON.Beacons.Website.Xdb.Elements;
+using MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets;
 using Sitecore.Analytics.Tracking;
 
 namespace MikeRobbins.SUGCON.Beacons.Website
@@ -20,14 +22,22 @@ namespace MikeRobbins.SUGCON.Beacons.Website
 
         public Person MapPerson(Contact contact)
         {
-            Person person = new Person();
+            var person = new Person();
 
             _xdbFacetRepository.GetPersonalInfo(contact, ref person);
 
             person.Id = contact.Identifiers.Identifier;
 
+            person.Animals.AddRange(GetVisitedAnimals(contact));
+
             return person;
         }
 
+        private IEnumerable<Animal> GetVisitedAnimals(Contact contact)
+        {
+            var zooVisit = contact.GetFacet<IZooVisitFacet>("ZooVisit");
+
+            return zooVisit.VisitedAnimals.Select(visitedAnimal => new Animal { Date = visitedAnimal.Date, Id = visitedAnimal.Id, Name = visitedAnimal.AnimalName});
+        }
     }
 }

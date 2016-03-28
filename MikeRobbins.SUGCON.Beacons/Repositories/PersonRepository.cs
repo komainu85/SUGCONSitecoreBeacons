@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using MikeRobbins.SUGCON.Beacons.Website.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.Models;
-using MikeRobbins.SUGCON.Beacons.Website.Xdb;
 using Sitecore.Analytics.DataAccess;
 using Sitecore.Services.Core;
 
@@ -30,13 +27,9 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
         {
             Person person = null;
 
-            LockAttemptStatus status;
-            var contact = _xdbContactRepository.FindContact(id, out status);
+            var contact = _xdbContactRepository.LoadContactReadOnly(id);
 
-            if (status == LockAttemptStatus.Success)
-            {
-                person = _mapper.MapPerson(contact);
-            }
+            person = _mapper.MapPerson(contact);
 
             return person;
         }
