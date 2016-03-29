@@ -29,7 +29,10 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Repositories
 
             var contact = _xdbContactRepository.LoadContactReadOnly(id);
 
-            person = _mapper.MapPerson(contact);
+            if (contact != null)
+            {
+                person = _mapper.MapPerson(contact);
+            }
 
             return person;
         }

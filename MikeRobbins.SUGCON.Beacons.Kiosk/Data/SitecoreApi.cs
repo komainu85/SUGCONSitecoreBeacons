@@ -1,16 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization.Json;
+using System.Threading.Tasks;
+using Windows.Data.Json;
 using Windows.Storage.Streams;
 using Windows.Web.Http;
 using Windows.Web.Http.Filters;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Models;
 
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 {
     public class SitecoreApi
     {
-        public HttpCookie Authenticate()
+        private readonly ModelBuilder _modelBuilder = new ModelBuilder();
+
+        public async Task<HttpCookie> Authenticate()
         {
             var filter = new HttpBaseProtocolFilter();
 
@@ -18,7 +25,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
             {
                 var authDetails = BuildJsonAuthDetails();
 
-                var authResult = client.PostAsync(new Uri("https://SUGCON/sitecore/api/ssc/auth/login"), authDetails).GetResults();
+                var authResult = await client.PostAsync(new Uri("https://SUGCON/sitecore/api/ssc/auth/login"), authDetails);
 
                 authResult.EnsureSuccessStatusCode();
 
@@ -26,7 +33,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
             }
         }
 
-        public dynamic GetUserDetails(HttpCookie authCookie, string userUniqueIdentifier)
+        public async Task<PersonViewModel> GetUserDetails(HttpCookie authCookie, string userUniqueIdentifier)
         {
             var filter = new HttpBaseProtocolFilter();
 
@@ -34,12 +41,13 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 
             using (var client = new HttpClient(filter))
             {
-                var itemResult = client.GetAsync(new Uri("https://sugcon/sitecore/api/ssc/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + userUniqueIdentifier)).GetResults();
+                var itemResult = await client.GetAsync(new Uri("https://sugcon/sitecore/api/ssc/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + userUniqueIdentifier));
 
                 itemResult.EnsureSuccessStatusCode();
 
-                return itemResult.Content.ReadAsStringAsync();
+                var result = await itemResult.Content.ReadAsStringAsync();
 
+                return _modelBuilder.CreatePersonViewModel(result);
             }
         }
 
