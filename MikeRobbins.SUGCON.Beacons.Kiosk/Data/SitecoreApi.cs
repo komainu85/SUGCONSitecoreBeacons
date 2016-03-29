@@ -1,31 +1,45 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Windows.Storage.Streams;
 using Windows.Web.Http;
+using Windows.Web.Http.Filters;
 
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 {
     public class SitecoreApi
     {
-        public async void Authenticate()
+        public HttpCookie Authenticate()
         {
+            var filter = new HttpBaseProtocolFilter();
 
-            using (var client = new HttpClient())
+            using (var client = new HttpClient(filter))
             {
                 var authDetails = BuildJsonAuthDetails();
 
-                var authResult = await client.PostAsync(new Uri("https://SUGCON/sitecore/api/ssc/auth/login"), authDetails);
+                var authResult = client.PostAsync(new Uri("https://SUGCON/sitecore/api/ssc/auth/login"), authDetails).GetResults();
 
                 authResult.EnsureSuccessStatusCode();
 
-                string uniqueIdentifier = "test@test.com"; //Pass this in from UI
+                return filter.CookieManager.GetCookies(new Uri("https://SUGCON/sitecore/api/ssc/auth/login")).FirstOrDefault(x => x.Name == ".ASPXAUTH");
+            }
+        }
 
-                var itemResult = await client.GetAsync(new Uri("https://sugcon/sitecore/api/ssc/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + uniqueIdentifier));
+        public dynamic GetUserDetails(HttpCookie authCookie, string userUniqueIdentifier)
+        {
+            var filter = new HttpBaseProtocolFilter();
+
+            filter.CookieManager.SetCookie(authCookie);
+
+            using (var client = new HttpClient(filter))
+            {
+                var itemResult = client.GetAsync(new Uri("https://sugcon/sitecore/api/ssc/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + userUniqueIdentifier)).GetResults();
 
                 itemResult.EnsureSuccessStatusCode();
 
-                var jsonContent = await itemResult.Content.ReadAsStringAsync() as dynamic;
+                return itemResult.Content.ReadAsStringAsync();
+
             }
         }
 
