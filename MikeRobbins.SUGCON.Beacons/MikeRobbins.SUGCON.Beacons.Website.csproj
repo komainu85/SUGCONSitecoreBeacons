@@ -153,8 +153,8 @@
     <Compile Include="IoC\Mvc\StructureMapDependencyResolver.cs" />
     <Compile Include="IoC\WebApi\SitecoreDependencyResolver.cs" />
     <Compile Include="IoC\WebApi\SitecoreDependencyScope.cs" />
-    <Compile Include="IoC\WebApi\StructureMapDependencyResolverScope.cs" />
     <Compile Include="IoC\WebApi\StructureMapDependencyResolver.cs" />
+    <Compile Include="IoC\WebApi\StructureMapDependencyResolverScope.cs" />
     <Compile Include="Mapper.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Person.cs" />
