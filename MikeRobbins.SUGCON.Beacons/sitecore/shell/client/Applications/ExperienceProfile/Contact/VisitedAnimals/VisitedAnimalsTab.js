@@ -26,8 +26,6 @@
                         var dataSet = jsonData.data.dataSet.visitedanimals;
                         this.VisitedAnimalsDataProvider.set(dataSetProperty, jsonData);
                         this.VistedAnimalsList.viewModel.items(dataSet);
-                    } else {
-                        this.ExternalDataTabMessageBar.addMessage("notification", this.NoAnimalData.get("text"));
                     }
                 }, this));
           }

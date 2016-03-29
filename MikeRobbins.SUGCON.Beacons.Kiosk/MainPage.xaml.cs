@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,10 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
         public MainPage()
         {
             this.InitializeComponent();
+
+            var sitecoreApi = new SitecoreApi();
+
+            sitecoreApi.Authenticate();
         }
     }
 }
