@@ -149,10 +149,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IoC\Registry.cs" />
-    <Compile Include="IoC\Mvc\SitecoreDependencyResolver.cs" />
+    <Compile Include="IoC\Mvc\ChainedDependencyResolver.cs" />
     <Compile Include="IoC\Mvc\StructureMapDependencyResolver.cs" />
-    <Compile Include="IoC\WebApi\SitecoreDependencyResolver.cs" />
-    <Compile Include="IoC\WebApi\SitecoreDependencyScope.cs" />
+    <Compile Include="IoC\WebApi\ChainedDependencyResolver.cs" />
+    <Compile Include="IoC\WebApi\ChainedDependencyScope.cs" />
     <Compile Include="IoC\WebApi\StructureMapDependencyResolver.cs" />
     <Compile Include="IoC\WebApi\StructureMapDependencyResolverScope.cs" />
     <Compile Include="Mapper.cs" />

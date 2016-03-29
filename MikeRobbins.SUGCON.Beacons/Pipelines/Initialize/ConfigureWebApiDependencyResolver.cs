@@ -12,7 +12,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Pipelines.Initialize
         {
             var container = new Container(new IoC.Registry());
 
-            var webApiResolver = new SitecoreDependencyResolver(
+            var webApiResolver = new ChainedDependencyResolver(
                                         new StructureMapDependencyResolver(container), 
                                         GlobalConfiguration.Configuration.DependencyResolver);
 

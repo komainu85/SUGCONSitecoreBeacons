@@ -6,9 +6,9 @@ using System.Web.Http.Dependencies;
 
 namespace MikeRobbins.SUGCON.Beacons.Website.IoC.WebApi
 {
-    public class SitecoreDependencyResolver : SitecoreDependencyScope, IDependencyResolver
+    public class ChainedDependencyResolver : ChainedDependencyScope, IDependencyResolver
     {
-        public SitecoreDependencyResolver(IDependencyResolver newResolver, IDependencyResolver currentResolver)
+        public ChainedDependencyResolver(IDependencyResolver newResolver, IDependencyResolver currentResolver)
             : base(newResolver, currentResolver)
         {
             _newResolver = newResolver;
@@ -17,7 +17,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.IoC.WebApi
 
         public IDependencyScope BeginScope()
         {
-            return new SitecoreDependencyScope(_newResolver, _fallbackResolver);
+            return new ChainedDependencyScope(_newResolver, _fallbackResolver);
         }
 
     }
