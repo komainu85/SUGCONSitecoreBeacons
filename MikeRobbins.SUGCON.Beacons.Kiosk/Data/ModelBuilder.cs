@@ -27,10 +27,14 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 
             for (uint i = 0; i < animals.Count; i++)
             {
-                yield return new Animal()
+                var animal = new Animal()
                 {
-                    Name = animals.GetObjectAt(i).GetNamedString("Name")
+                    Name = animals.GetObjectAt(i).GetNamedString("Name"),
                 };
+
+                animal.CreateBitmapImage(animals.GetObjectAt(i).GetNamedString("ImageUrl"));
+
+                yield return animal;
             }
         }
     }

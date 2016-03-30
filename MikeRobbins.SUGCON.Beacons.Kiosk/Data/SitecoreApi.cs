@@ -15,6 +15,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 {
     public class SitecoreApi
     {
+        private const string BaseUrl = "https://SUGCON/sitecore/api/ssc";
         private readonly ModelBuilder _modelBuilder = new ModelBuilder();
 
         public async Task<HttpCookie> Authenticate()
@@ -25,11 +26,11 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
             {
                 var authDetails = BuildJsonAuthDetails();
 
-                var authResult = await client.PostAsync(new Uri("https://SUGCON/sitecore/api/ssc/auth/login"), authDetails);
+                var authResult = await client.PostAsync(new Uri(BaseUrl+ "/auth/login"), authDetails);
 
                 authResult.EnsureSuccessStatusCode();
 
-                return filter.CookieManager.GetCookies(new Uri("https://SUGCON/sitecore/api/ssc/auth/login")).FirstOrDefault(x => x.Name == ".ASPXAUTH");
+                return filter.CookieManager.GetCookies(new Uri(BaseUrl +"/auth/login")).FirstOrDefault(x => x.Name == ".ASPXAUTH");
             }
         }
 
@@ -41,7 +42,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 
             using (var client = new HttpClient(filter))
             {
-                var itemResult = await client.GetAsync(new Uri("https://sugcon/sitecore/api/ssc/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + userUniqueIdentifier));
+                var itemResult = await client.GetAsync(new Uri(BaseUrl+ "/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + userUniqueIdentifier));
 
                 itemResult.EnsureSuccessStatusCode();
 
