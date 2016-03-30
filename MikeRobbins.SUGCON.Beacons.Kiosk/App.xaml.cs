@@ -7,6 +7,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -43,39 +45,56 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                // disabled, obscures the hamburger button, enable if you need it
+                //this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
 
-            Frame rootFrame = Window.Current.Content as Frame;
+            var shell = Window.Current.Content as Shell;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-            if (rootFrame == null)
+            if (shell == null)
             {
-                // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
+                // Create a Shell which navigates to the first page
+                shell = new Shell();
 
-                rootFrame.NavigationFailed += OnNavigationFailed;
+                // hook-up shell root frame navigation events
+                shell.RootFrame.NavigationFailed += OnNavigationFailed;
+                shell.RootFrame.Navigated += OnNavigated;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
                 }
 
-                // Place the frame in the current Window
-                Window.Current.Content = rootFrame;
+                // set the Shell as content
+                Window.Current.Content = shell;
+
+                // listen for back button clicks (both soft- and hardware)
+                SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
+                UpdateBackButtonVisibility();
             }
 
-            if (rootFrame.Content == null)
-            {
-                // When the navigation stack isn't restored navigate to the first page,
-                // configuring the new page by passing required information as a navigation
-                // parameter
-                rootFrame.Navigate(typeof(ShopPage), e.Arguments);
-            }
             // Ensure the current window is active
             Window.Current.Activate();
+        }
+
+        // handle software back button press
+        void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            var shell = (Shell)Window.Current.Content;
+            if (shell.RootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                shell.RootFrame.GoBack();
+            }
+        }
+
+        void OnNavigated(object sender, NavigationEventArgs e)
+        {
+            UpdateBackButtonVisibility();
         }
 
         /// <summary>
@@ -100,6 +119,19 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        private void UpdateBackButtonVisibility()
+        {
+            var shell = (Shell)Window.Current.Content;
+
+            var visibility = AppViewBackButtonVisibility.Collapsed;
+            if (shell.RootFrame.CanGoBack)
+            {
+                visibility = AppViewBackButtonVisibility.Visible;
+            }
+
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = visibility;
         }
     }
 }
