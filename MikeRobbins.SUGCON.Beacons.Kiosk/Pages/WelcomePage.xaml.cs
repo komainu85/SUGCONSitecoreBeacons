@@ -1,4 +1,7 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System;
+using Windows.Storage;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
@@ -10,6 +13,18 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
         public WelcomePage()
         {
             this.InitializeComponent();
+        }
+
+        private void ContactLookUp_OnClick(object sender, RoutedEventArgs e)
+        {
+            StoreUserSession(EmailAddress.Text);
+
+            this.Frame.Navigate(typeof (Page1));
+        }
+
+        private void StoreUserSession(string emailAddress)
+        {
+            ((App)Application.Current).CurrentUserEmail = emailAddress;
         }
     }
 }

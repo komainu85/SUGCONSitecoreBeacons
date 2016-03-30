@@ -11,7 +11,7 @@
             <StackPanel>
                 <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
 
-                <TextBlock Text="Please select your user account."  Style="{StaticResource ParagraphTextBlockStyle}"></TextBlock>
+                <TextBlock Text="Please enter your email address to retrieve your zoo visit details."  Style="{StaticResource ParagraphTextBlockStyle}"></TextBlock>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -21,9 +21,10 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Grid.Row="0"></Image>
-                    <TextBlock Name="Name" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"  />
-                    <CheckBox Grid.Column="2" Grid.Row="0"></CheckBox>
+
+                    <TextBlock Name="Name" Text="Email Address:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"  />
+                    <TextBox Name="EmailAddress" Grid.Column="1" Grid.Row="0"></TextBox>
+                    <Button Name="ContactLookUp" Content="Load Account" Grid.Column="2" Grid.Row="0" Click="ContactLookUp_OnClick"></Button>
                 </Grid>
 
             </StackPanel>

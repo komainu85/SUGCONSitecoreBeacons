@@ -13,11 +13,11 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
             this.InitializeComponent();
 
             var vm = new ShellViewModel();
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Welcome", PageType = typeof(WelcomePage) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Page 1", PageType = typeof(Page1) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Page 2", PageType = typeof(Page2) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Page 3", PageType = typeof(Page3) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Account login", PageType = typeof(WelcomePage) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Visited Animals", PageType = typeof(Page1) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "My Offers", PageType = typeof(Page2) });
 
+            
             vm.BottomItems.Add(new NavigationItem { Icon = "", DisplayName = "Settings", PageType = typeof(SettingsPage) });
 
             // select the first top item
