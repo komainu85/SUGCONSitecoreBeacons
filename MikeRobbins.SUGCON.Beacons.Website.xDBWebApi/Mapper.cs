@@ -32,7 +32,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.xDBWebApi
 
             person.Id = contact.Identifiers.Identifier;
 
-            //   person.Animals.AddRange(GetVisitedAnimals(contact));
+            person.Animals.AddRange(GetVisitedAnimals(contact));
 
             return person;
         }

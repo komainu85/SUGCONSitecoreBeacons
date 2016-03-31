@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
+using SitecoreApi = MikeRobbins.SUGCON.Beacons.Kiosk.Services.SitecoreApi;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
@@ -30,15 +27,20 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 
         public async void LoadVisitedAnimals()
         {
-            var sitecoreApi = new SitecoreApi();
+            var currentUserEmail = LoadCurrentUserEmail();
 
-            var authCookie = await sitecoreApi.Authenticate();
-
-            var personViewModel = await sitecoreApi.GetUserDetails(authCookie, LoadCurrentUserEmail());
-
-            foreach (var animal in personViewModel.Animals)
+            if (!string.IsNullOrEmpty(currentUserEmail))
             {
-                _animals.Add(animal);
+                var sitecoreApi = new SitecoreApi();
+
+                var authCookie = await sitecoreApi.Authenticate();
+
+                var personViewModel = await sitecoreApi.GetUserDetails(authCookie, currentUserEmail);
+
+                foreach (var animal in personViewModel.Animals)
+                {
+                    _animals.Add(animal);
+                }
             }
         }
     }

@@ -38,7 +38,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 
             using (var client = new HttpClient(filter))
             {
-                var itemResult = await client.GetAsync(new Uri(BaseUrl+ "/MikeRobbins-SUGCON-Beacons-Website-Controllers/person/" + userUniqueIdentifier));
+                var itemResult = await client.GetAsync(new Uri(BaseUrl+ "/MikeRobbins-SUGCON-Beacons-Website-xDBWebApi-Controllers/person/" + userUniqueIdentifier));
 
                 itemResult.EnsureSuccessStatusCode();
 
