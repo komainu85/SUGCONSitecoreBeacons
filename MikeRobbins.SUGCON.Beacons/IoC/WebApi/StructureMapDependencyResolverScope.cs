@@ -16,7 +16,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.IoC.WebApi
             if (container == null)
                 throw new ArgumentNullException("container");
 
-            this._container = container;
+            _container = container;
         }
 
         public object GetService(Type serviceType)

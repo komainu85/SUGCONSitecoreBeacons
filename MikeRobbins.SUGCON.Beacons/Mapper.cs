@@ -8,6 +8,8 @@ using MikeRobbins.SUGCON.Beacons.Website.Xdb;
 using MikeRobbins.SUGCON.Beacons.Website.Xdb.Elements;
 using MikeRobbins.SUGCON.Beacons.Website.Xdb.Facets;
 using Sitecore.Analytics.Tracking;
+using Sitecore.Data;
+using Sitecore.Data.Items;
 
 namespace MikeRobbins.SUGCON.Beacons.Website
 {
@@ -35,9 +37,26 @@ namespace MikeRobbins.SUGCON.Beacons.Website
 
         private IEnumerable<Animal> GetVisitedAnimals(Contact contact)
         {
-            var zooVisit = contact.GetFacet<IZooVisitFacet>("ZooVisit");
+            var zooVisit = _xdbFacetRepository.GetFacet<IZooVisitFacet>(contact, "ZooVisit");
 
-            return zooVisit.VisitedAnimals.Select(visitedAnimal => new Animal { Date = visitedAnimal.Date, Id = visitedAnimal.Id, Name = visitedAnimal.AnimalName});
+            return zooVisit.VisitedAnimals.Select(animal => new Animal
+            {
+                Date = animal.Date,
+                Id = animal.Id,
+                Name = animal.AnimalName,
+                ImageUrl = GetImageUrl(animal.Id)
+            });
+        }
+
+        private string GetImageUrl(ID id)
+        {
+            var item = Database.GetDatabase("master").GetItem(id);
+
+            var imageField = (Sitecore.Data.Fields.ImageField)item.Fields["Image"];
+
+            var mediaItem = (MediaItem)imageField.MediaItem;
+
+           return "http://SUGCON/" + Sitecore.StringUtil.EnsurePrefix('/', Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem));
         }
     }
 }

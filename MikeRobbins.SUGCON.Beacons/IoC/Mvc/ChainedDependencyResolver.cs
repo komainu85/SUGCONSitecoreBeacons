@@ -4,11 +4,11 @@ using System.Web.Mvc;
 
 namespace MikeRobbins.SUGCON.Beacons.Website.IoC.Mvc
 {
-    public class SitecoreDependencyResolver : IDependencyResolver
+    public class ChainedDependencyResolver : IDependencyResolver
     {
         private readonly IDependencyResolver _wrappedResolver;
 
-        public SitecoreDependencyResolver(IDependencyResolver wrappedResolver)
+        public ChainedDependencyResolver(IDependencyResolver wrappedResolver)
         {
             _wrappedResolver = wrappedResolver;
         }
