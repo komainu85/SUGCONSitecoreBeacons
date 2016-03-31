@@ -11,9 +11,9 @@
             <StackPanel>
                 <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
 
-                <TextBlock Text="Please enter your email address to retrieve your zoo visit details."  Style="{StaticResource ParagraphTextBlockStyle}"></TextBlock>
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -21,10 +21,12 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Please enter your email address to retrieve your zoo visit details."  Style="{StaticResource ParagraphTextBlockStyle}"></TextBlock>
 
-                    <TextBlock Name="Name" Text="Email Address:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"  />
-                    <TextBox Name="EmailAddress" Grid.Column="1" Grid.Row="0"></TextBox>
-                    <Button Name="ContactLookUp" Content="Load Account" Grid.Column="2" Grid.Row="0" Click="ContactLookUp_OnClick"></Button>
+                    <TextBlock Name="Name" Text="Email Address:" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" TextAlignment="Right" TextWrapping="Wrap"  />
+                    <TextBox Name="EmailAddress" Grid.Column="1" Grid.Row="1"></TextBox>
+                    <Button Name="ContactLookUp" Content="Load Account" Grid.Column="2" Grid.Row="1" Click="ContactLookUp_OnClick" HorizontalAlignment="Center"></Button>
                 </Grid>
 
             </StackPanel>

@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using Windows.Data.Json;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Models;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
+using MikeRobbins.SUGCON.Beacons.Kiosk.ViewModels;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 {
     public class ModelBuilder
     {
-        public PersonViewModel CreatePersonViewModel(string jsonString)
+        public Person CreatePersonViewModel(string jsonString)
         {
             var root = JsonValue.Parse(jsonString).GetObject();
 
-            var personalViewModel = new PersonViewModel()
+            var personalViewModel = new Person()
             {
                 FirstName = root.GetNamedString("FirstName"),
                 Surname = root.GetNamedString("Surname"),

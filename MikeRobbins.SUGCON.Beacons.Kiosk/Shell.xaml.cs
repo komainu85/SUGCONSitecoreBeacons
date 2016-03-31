@@ -2,7 +2,7 @@
 using Windows.UI.Xaml.Controls;
 using Intense.Presentation;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Pages;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Presentation;
+using MikeRobbins.SUGCON.Beacons.Kiosk.ViewModels;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk
 {
@@ -15,9 +15,9 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
             var vm = new ShellViewModel();
             vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Account login", PageType = typeof(WelcomePage) });
             vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Visited Animals", PageType = typeof(Page1) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "My Offers", PageType = typeof(Page2) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Zoo Map", PageType = typeof(Page2) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "My Offers", PageType = typeof(Page3) });
 
-            
             vm.BottomItems.Add(new NavigationItem { Icon = "", DisplayName = "Settings", PageType = typeof(SettingsPage) });
 
             // select the first top item

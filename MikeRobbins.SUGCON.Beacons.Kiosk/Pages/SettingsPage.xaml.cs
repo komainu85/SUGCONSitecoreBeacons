@@ -1,5 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Presentation;
+using MikeRobbins.SUGCON.Beacons.Kiosk.ViewModels;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {

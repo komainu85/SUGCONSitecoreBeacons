@@ -4,7 +4,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Models;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
