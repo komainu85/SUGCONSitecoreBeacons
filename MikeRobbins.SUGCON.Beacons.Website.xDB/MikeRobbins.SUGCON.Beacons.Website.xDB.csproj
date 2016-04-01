@@ -49,7 +49,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Analytics">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Aggregation">
       <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Aggregation.dll</HintPath>
@@ -67,10 +67,10 @@
       <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.DataAccess">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.DataAccess.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Model">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Model.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Model.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.MongoDB">
       <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.MongoDB.dll</HintPath>
@@ -90,8 +90,26 @@
     <Reference Include="Sitecore.Analytics.Sql">
       <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Analytics.Sql.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Cintel">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Cintel.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Services.Client">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Services.Core">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Services.Infrastructure">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Services.Infrastructure.Sitecore">
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\SUGCON\Website\bin\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
