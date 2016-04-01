@@ -19,7 +19,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
         {
             StoreUserSession(EmailAddress.Text);
 
-            this.Frame.Navigate(typeof (Page1));
+            this.Frame.Navigate(typeof (VisitedAnimalsPage));
         }
 
         private void StoreUserSession(string emailAddress)

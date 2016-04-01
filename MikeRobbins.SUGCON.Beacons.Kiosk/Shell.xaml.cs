@@ -14,9 +14,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
 
             var vm = new ShellViewModel();
             vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Account login", PageType = typeof(WelcomePage) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Visited Animals", PageType = typeof(Page1) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Zoo Map", PageType = typeof(Page2) });
-            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "My Offers", PageType = typeof(Page3) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Visited Animals", PageType = typeof(VisitedAnimalsPage) });
+            vm.TopItems.Add(new NavigationItem { Icon = "", DisplayName = "Zoo Map", PageType = typeof(Map) });
 
             vm.BottomItems.Add(new NavigationItem { Icon = "", DisplayName = "Settings", PageType = typeof(SettingsPage) });
 
