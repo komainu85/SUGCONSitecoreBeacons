@@ -22,7 +22,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
         private async void ContactLookUp_OnClick(object sender, RoutedEventArgs e)
         {
             await AuthenticateUser();
-            LoadPersonDetails();
+            await LoadPersonDetails();
 
             this.Frame.Navigate(typeof(VisitedAnimalsPage));
         }
@@ -39,7 +39,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             }
         }
 
-        public async void LoadPersonDetails()
+        public async Task LoadPersonDetails()
         {
             if (!string.IsNullOrEmpty(EmailAddress.Text))
             {

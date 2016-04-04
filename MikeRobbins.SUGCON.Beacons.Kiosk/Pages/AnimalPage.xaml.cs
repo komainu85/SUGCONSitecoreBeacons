@@ -1,7 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.Web.Http;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
@@ -29,25 +31,35 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 
         private void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
         {
-           RegisterGoal();
+            RegisterGoal(Goal.SponsorAnimal, "Sponsored");
         }
 
-        private async void RegisterGoal()
+        private void Shop_OnClick(object sender, RoutedEventArgs e)
         {
-            var sitecoreApi = new SitecoreAuthenticationService();
+            RegisterGoal(Goal.BuyToy, "Toy Bought");
+        }
 
-            var authCookie = await sitecoreApi.AuthenticateAsync();
+        private async void RegisterGoal(Goal goal, string goalText)
+        {
+            var authCookie = LoadAuthCookie();
 
             var goalService = new SitecoreGoalService(authCookie);
 
             var person = LoadCurrentPerson();
 
-            goalService.RegisterGoalAsync(Goal.SponsorAnimal, person.UniqueIdentifier, "Sponsored" + Animal.Name);
+            goalService.RegisterGoalAsync(goal, person.UniqueIdentifier, goalText + " " + Animal.Name);
         }
 
         private Person LoadCurrentPerson()
         {
             return ((App)Application.Current).CurrentPerson;
         }
+
+        private HttpCookie LoadAuthCookie()
+        {
+            return ((App)Application.Current).AuthCookie;
+        }
+
+
     }
 }

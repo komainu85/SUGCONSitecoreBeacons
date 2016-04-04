@@ -10,8 +10,8 @@
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton Icon="Favorite" Label="Sponsor"/>
-            <AppBarButton Icon="Shop" Label="Buy Toy" Click="SponsorAnimal_OnClick"/>
+            <AppBarButton Icon="Favorite" Label="Sponsor" Click="SponsorAnimal_OnClick"/>
+            <AppBarButton Icon="Shop" Label="Buy Toy" Click="Shop_OnClick" />
         </CommandBar>
     </Page.BottomAppBar>
 
