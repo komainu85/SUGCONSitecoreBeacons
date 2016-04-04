@@ -22,30 +22,22 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             LoadVisitedAnimals();
         }
 
-        private string LoadCurrentUserEmail()
+        public void LoadVisitedAnimals()
         {
-            return ((App)Application.Current).CurrentUserEmail;
-        }
+            var currentPerson = GetCurrentPerson();
 
-        public async void LoadVisitedAnimals()
-        {
-            var currentUserEmail = LoadCurrentUserEmail();
-
-            if (!string.IsNullOrEmpty(currentUserEmail))
-            {
-                var sitecoreApi = new SitecoreAuthenticationService();
-
-                var authCookie = await sitecoreApi.Authenticate();
-
-                var person = await sitecoreApi.GetUserDetails(authCookie, currentUserEmail);
-
-                StoreUserSession(person);
-
-                foreach (var animal in person.Animals)
+            if (currentPerson !=null)
+            { 
+                foreach (var animal in currentPerson.Animals)
                 {
                     _animals.Add(animal);
                 }
             }
+        }
+
+        private Person GetCurrentPerson()
+        {
+            return ((App)Application.Current).CurrentPerson;
         }
 
         private void Animal_OnPointerReleased(object sender, PointerRoutedEventArgs e)
@@ -55,11 +47,6 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             var animal = animalPanel?.DataContext as Animal;
 
             Frame.Navigate(typeof (AnimalPage), animal);
-        }
-
-        private void StoreUserSession(Person person)
-        {
-            ((App)Application.Current).CurrentPerson = person;
         }
     }
 }

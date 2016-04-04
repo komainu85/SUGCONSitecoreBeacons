@@ -27,20 +27,22 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             Animal = (Animal)e.Parameter;
         }
 
-        private async void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
+        private void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
         {
-            RegisterGoal();
+           RegisterGoal();
         }
 
         private async void RegisterGoal()
         {
             var sitecoreApi = new SitecoreAuthenticationService();
 
-            var authCookie = await sitecoreApi.Authenticate();
+            var authCookie = await sitecoreApi.AuthenticateAsync();
+
+            var goalService = new SitecoreGoalService(authCookie);
 
             var person = LoadCurrentPerson();
 
-            sitecoreApi.RegisterGoal(authCookie, Goal.SponsorAnimal, person.UniqueIdentifier, "Sponsored" + Animal.Name);
+            goalService.RegisterGoalAsync(Goal.SponsorAnimal, person.UniqueIdentifier, "Sponsored" + Animal.Name);
         }
 
         private Person LoadCurrentPerson()

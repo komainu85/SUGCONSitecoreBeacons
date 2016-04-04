@@ -4,6 +4,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
+using Windows.Web.Http;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk
@@ -13,7 +14,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
     /// </summary>
     sealed partial class App : Application
     {
-        public string CurrentUserEmail { get; set; }
+        public HttpCookie AuthCookie { get; set; }
+
         public Person CurrentPerson { get; set; }
 
         /// <summary>

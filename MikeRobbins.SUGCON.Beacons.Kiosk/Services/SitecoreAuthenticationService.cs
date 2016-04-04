@@ -10,7 +10,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
     public class SitecoreAuthenticationService: SitecoreServiceBase
     {
-        public async Task<HttpCookie> Authenticate()
+        public async Task<HttpCookie> AuthenticateAsync()
         {
             var filter = new HttpBaseProtocolFilter();
 

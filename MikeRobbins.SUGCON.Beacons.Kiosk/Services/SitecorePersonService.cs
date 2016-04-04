@@ -19,7 +19,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
             _authCookie = authCookie;
         }
 
-        public async Task<Person> GetUserDetails(string userUniqueIdentifier)
+        public async Task<Person> GetUserDetailsAsync(string userUniqueIdentifier)
         {
             var filter = new HttpBaseProtocolFilter();
 

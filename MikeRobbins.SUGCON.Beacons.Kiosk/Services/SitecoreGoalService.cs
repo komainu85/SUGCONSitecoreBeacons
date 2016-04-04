@@ -17,7 +17,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
             _authCookie = authCookie;
         }
 
-        public async void RegisterGoal(Goal goal, string userUniqueIdentifier, string goalText)
+        public async void RegisterGoalAsync(Goal goal, string userUniqueIdentifier, string goalText)
         {
             var filter = new HttpBaseProtocolFilter();
 
