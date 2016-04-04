@@ -33,7 +33,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 
             if (!string.IsNullOrEmpty(currentUserEmail))
             {
-                var sitecoreApi = new SitecoreApiService();
+                var sitecoreApi = new SitecoreAuthenticationService();
 
                 var authCookie = await sitecoreApi.Authenticate();
 

@@ -4,16 +4,24 @@ using Windows.Storage.Streams;
 using Windows.Web.Http;
 using Windows.Web.Http.Filters;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Services.Base;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
     public class SitecoreGoalService : SitecoreServiceBase
     {
-        public async void RegisterGoal(HttpCookie authCookie, Goal goal, string userUniqueIdentifier, string goalText)
+        private readonly HttpCookie _authCookie;
+
+        public SitecoreGoalService(HttpCookie authCookie)
+        {
+            _authCookie = authCookie;
+        }
+
+        public async void RegisterGoal(Goal goal, string userUniqueIdentifier, string goalText)
         {
             var filter = new HttpBaseProtocolFilter();
 
-            filter.CookieManager.SetCookie(authCookie);
+            filter.CookieManager.SetCookie(_authCookie);
 
             using (var client = new HttpClient(filter))
             {

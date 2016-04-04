@@ -34,7 +34,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 
         private async void RegisterGoal()
         {
-            var sitecoreApi = new SitecoreApiService();
+            var sitecoreApi = new SitecoreAuthenticationService();
 
             var authCookie = await sitecoreApi.Authenticate();
 
