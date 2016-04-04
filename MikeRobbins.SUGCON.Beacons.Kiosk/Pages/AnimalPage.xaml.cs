@@ -1,5 +1,7 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -29,14 +31,20 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             Animal = (Animal)e.Parameter;
         }
 
-        private void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
+        private async void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
         {
             RegisterGoal(Goal.SponsorAnimal, "Sponsored");
+
+            var dialog = new MessageDialog("You have sponsored");
+            await dialog.ShowAsync();
         }
 
-        private void Shop_OnClick(object sender, RoutedEventArgs e)
+        private async void Shop_OnClick(object sender, RoutedEventArgs e)
         {
             RegisterGoal(Goal.BuyToy, "Toy Bought");
+
+            var dialog = new MessageDialog("The shop assistant is getting your toy");
+            await dialog.ShowAsync();
         }
 
         private async void RegisterGoal(Goal goal, string goalText)
