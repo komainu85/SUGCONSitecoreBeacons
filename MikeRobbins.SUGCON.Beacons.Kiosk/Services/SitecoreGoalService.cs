@@ -7,7 +7,7 @@ using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
-    public class SitecoreServiceGoalService : SitecoreServiceBase
+    public class SitecoreGoalService : SitecoreServiceBase
     {
         public async void RegisterGoal(HttpCookie authCookie, Goal goal, string userUniqueIdentifier, string goalText)
         {

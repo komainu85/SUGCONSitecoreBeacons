@@ -115,12 +115,12 @@
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\SitecoreServiceBase.cs" />
-    <Compile Include="Services\SitecoreServiceGoalService.cs" />
+    <Compile Include="Services\SitecoreGoalService.cs" />
     <Compile Include="Themes\DisplayableTheme.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\SitecoreServiceApi.cs" />
+    <Compile Include="Services\SitecoreApiService.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>

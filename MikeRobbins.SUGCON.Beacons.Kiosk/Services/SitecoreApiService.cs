@@ -9,7 +9,7 @@ using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
-    public class SitecoreServiceApi: SitecoreServiceBase
+    public class SitecoreApiService: SitecoreServiceBase
     {
         public async Task<HttpCookie> Authenticate()
         {
