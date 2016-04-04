@@ -11,8 +11,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
     public abstract class SitecoreServiceBase
     {
-        private const string BaseUrl = "https://SUGCON/sitecore/api/ssc";
+        protected const string BaseUrl = "https://SUGCON/sitecore/api/ssc";
 
-        private readonly ModelBuilder _modelBuilder = new ModelBuilder();
+        protected readonly ModelBuilder _modelBuilder = new ModelBuilder();
     }
 }
