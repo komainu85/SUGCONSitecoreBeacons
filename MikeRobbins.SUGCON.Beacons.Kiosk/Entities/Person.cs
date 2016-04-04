@@ -4,6 +4,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Entities
 {
     public class Person
     {
+        public string UniqueIdentifier { get; set; }
+
         public string Email { get; set; }
 
         public string FirstName { get; set; }

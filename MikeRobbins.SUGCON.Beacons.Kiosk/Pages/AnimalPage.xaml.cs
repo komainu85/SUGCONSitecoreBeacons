@@ -1,6 +1,10 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System.Threading.Tasks;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
@@ -21,6 +25,27 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             base.OnNavigatedTo(e);
 
             Animal = (Animal)e.Parameter;
+        }
+
+        private async void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
+        {
+            RegisterGoal();
+        }
+
+        private async void RegisterGoal()
+        {
+            var sitecoreApi = new SitecoreServiceApi();
+
+            var authCookie = await sitecoreApi.Authenticate();
+
+            var person = LoadCurrentPerson();
+
+            sitecoreApi.RegisterGoal(authCookie, Goal.SponsorAnimal, person.UniqueIdentifier, "Sponsored" + Animal.Name);
+        }
+
+        private Person LoadCurrentPerson()
+        {
+            return ((App)Application.Current).CurrentPerson;
         }
     }
 }

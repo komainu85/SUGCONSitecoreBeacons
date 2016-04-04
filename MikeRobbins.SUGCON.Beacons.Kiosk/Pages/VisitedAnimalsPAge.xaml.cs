@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Intense.UI;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
-using SitecoreApi = MikeRobbins.SUGCON.Beacons.Kiosk.Services.SitecoreApi;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
@@ -33,13 +33,15 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 
             if (!string.IsNullOrEmpty(currentUserEmail))
             {
-                var sitecoreApi = new SitecoreApi();
+                var sitecoreApi = new SitecoreServiceApi();
 
                 var authCookie = await sitecoreApi.Authenticate();
 
-                var personViewModel = await sitecoreApi.GetUserDetails(authCookie, currentUserEmail);
+                var person = await sitecoreApi.GetUserDetails(authCookie, currentUserEmail);
 
-                foreach (var animal in personViewModel.Animals)
+                StoreUserSession(person);
+
+                foreach (var animal in person.Animals)
                 {
                     _animals.Add(animal);
                 }
@@ -53,6 +55,11 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             var animal = animalPanel?.DataContext as Animal;
 
             Frame.Navigate(typeof (AnimalPage), animal);
+        }
+
+        private void StoreUserSession(Person person)
+        {
+            ((App)Application.Current).CurrentPerson = person;
         }
     }
 }

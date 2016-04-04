@@ -14,7 +14,7 @@
                 <Image Width="400" Source="{x:Bind Animal.Image }" HorizontalAlignment="Center"></Image>
 
                 <StackPanel HorizontalAlignment="Center" Width="400" Orientation="Horizontal">
-                    <Button Foreground="{ThemeResource ContentDialogBorderThemeBrush}" Content="&#xE734;" FontFamily="Segoe MDL2 Assets" Margin="0,0,10,0" ></Button>
+                    <Button Name="SponsorAnimal" Click="SponsorAnimal_OnClick" Foreground="{ThemeResource ContentDialogBorderThemeBrush}" Content="&#xE734;" FontFamily="Segoe MDL2 Assets" Margin="0,0,10,0" ></Button>
 
                     <Button Foreground="{ThemeResource ContentDialogBorderThemeBrush}" Content="&#xE719;" FontFamily="Segoe MDL2 Assets" ></Button>
                 </StackPanel>

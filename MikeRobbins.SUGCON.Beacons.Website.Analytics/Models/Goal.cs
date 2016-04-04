@@ -15,6 +15,5 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Analytics.Models
 
         public string GoalText { get; set; }
 
-        public Guid PageId { get; set; }
     }
 }

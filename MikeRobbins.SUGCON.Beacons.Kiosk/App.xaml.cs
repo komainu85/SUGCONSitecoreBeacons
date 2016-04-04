@@ -4,6 +4,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk
 {
@@ -13,6 +14,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk
     sealed partial class App : Application
     {
         public string CurrentUserEmail { get; set; }
+        public Person CurrentPerson { get; set; }
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code

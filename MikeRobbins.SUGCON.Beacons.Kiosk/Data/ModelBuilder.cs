@@ -16,6 +16,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
             {
                 FirstName = root.GetNamedString("FirstName"),
                 Surname = root.GetNamedString("Surname"),
+                UniqueIdentifier = root.GetNamedString("Id"),
                 Animals = GetAnimals(root).ToList()
             };
 
