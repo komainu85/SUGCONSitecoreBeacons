@@ -1,4 +1,6 @@
-﻿using MikeRobbins.SUGCON.Beacons.Website.xDB.Contracts;
+﻿using MikeRobbins.SUGCON.Beacons.Website.Analytics.Models;
+using MikeRobbins.SUGCON.Beacons.Website.Analytics.Repositories;
+using MikeRobbins.SUGCON.Beacons.Website.xDB.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.xDB.Repositories;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Contracts;
@@ -16,6 +18,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.IoC
             For<IXdbFacetRepository>().Use<XdbFacetRepository>();
             For<IMapper>().Use<Mapper>();
             For(typeof(IRepository<Person>)).Use(typeof(PersonRepository));
+            For(typeof(IRepository<Goal>)).Use(typeof(GoalRepository));
         }
     }
 }

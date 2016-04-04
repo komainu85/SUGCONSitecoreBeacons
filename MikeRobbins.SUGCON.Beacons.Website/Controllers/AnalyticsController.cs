@@ -27,9 +27,9 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
                     return camapignCode;
                 }
 
-                return null;            
-            }  
-        } 
+                return null;
+            }
+        }
 
         public AnalyticsController(IXdbFacetRepository xdbFacetRepository)
         {
@@ -40,8 +40,6 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
         {
             if (!Tracker.IsActive)
                 Tracker.StartTracking();
-
-            Tracker.Current.Session.CreateInteraction(HttpContext);
 
             if (CampaignCode == null) return;
             if (CampaignCode != _animalVisit) return;
