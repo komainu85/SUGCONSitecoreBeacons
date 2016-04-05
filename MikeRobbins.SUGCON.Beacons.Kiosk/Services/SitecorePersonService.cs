@@ -4,13 +4,14 @@ using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Web.Http;
 using Windows.Web.Http.Filters;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Contracts;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Services.Base;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
-    public class SitecorePersonService : SitecoreServiceBase
+    public class SitecorePersonService : SitecoreServiceBase, ISitecorePersonService
     {
         private readonly HttpCookie _authCookie;
 

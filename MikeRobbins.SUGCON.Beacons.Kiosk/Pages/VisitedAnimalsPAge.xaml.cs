@@ -2,15 +2,10 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
-using Intense.UI;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class VisitedAnimalsPage : Page
     {
         private readonly ObservableCollection<Animal> _animals = new ObservableCollection<Animal>();

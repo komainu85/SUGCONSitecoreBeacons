@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\CurrentSession.cs" />
     <Compile Include="Data\Goal.cs" />
     <Compile Include="Data\ModelBuilder.cs" />
     <Compile Include="Entities\Animal.cs" />
@@ -114,6 +115,9 @@
     <Compile Include="Pages\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Contracts\ISitecoreAuthenticationService.cs" />
+    <Compile Include="Contracts\ISitecoreGoalService.cs" />
+    <Compile Include="Contracts\ISitecorePersonService.cs" />
     <Compile Include="Services\SitecorePersonService.cs" />
     <Compile Include="Services\Base\SitecoreServiceBase.cs" />
     <Compile Include="Services\SitecoreGoalService.cs" />

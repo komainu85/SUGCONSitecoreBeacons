@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using Windows.Devices.Geolocation;
+using Windows.UI.Xaml.Controls;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
@@ -10,6 +11,19 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
         public Map()
         {
             this.InitializeComponent();
+
+            SetMap();
+        }
+
+        private void SetMap()
+        {
+            var cityPosition = new BasicGeoposition() { Latitude = 55.6381385, Longitude = 12.5764086 };
+            var cityCenter = new Geopoint(cityPosition);
+
+            // Set the map location.
+            MapControl.Center = cityCenter;
+            MapControl.ZoomLevel = 12;
+            MapControl.LandmarksVisible = true;
         }
     }
 }

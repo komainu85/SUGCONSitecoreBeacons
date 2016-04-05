@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Windows.Data.Json;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
-using MikeRobbins.SUGCON.Beacons.Kiosk.ViewModels;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
 {

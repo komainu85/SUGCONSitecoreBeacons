@@ -10,9 +10,9 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Padding="{x:Bind Frame.Padding, Mode=OneWay}">
             <StackPanel>
-                <TextBlock Text="Zoo Map" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
+                <TextBlock Text="Zoo Map" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" />
 
-                <maps:MapControl />
+                <maps:MapControl HorizontalAlignment="Stretch" Height="300" Name="MapControl" MapServiceToken="" />
 
             </StackPanel>
         </ScrollViewer>

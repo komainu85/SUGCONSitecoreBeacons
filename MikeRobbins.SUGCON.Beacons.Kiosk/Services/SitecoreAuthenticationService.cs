@@ -4,11 +4,12 @@ using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Web.Http;
 using Windows.Web.Http.Filters;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Contracts;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Services.Base;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 {
-    public class SitecoreAuthenticationService: SitecoreServiceBase
+    public class SitecoreAuthenticationService: SitecoreServiceBase, ISitecoreAuthenticationService
     {
         public async Task<HttpCookie> AuthenticateAsync()
         {

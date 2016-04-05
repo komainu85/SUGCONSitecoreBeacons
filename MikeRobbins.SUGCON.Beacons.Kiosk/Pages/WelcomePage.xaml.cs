@@ -1,22 +1,20 @@
-﻿using System;
-using System.Threading.Tasks;
-using Windows.Storage;
+﻿using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.Web.Http;
-using MikeRobbins.SUGCON.Beacons.Kiosk.Entities;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Contracts;
+using MikeRobbins.SUGCON.Beacons.Kiosk.Data;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Services;
 
 namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class WelcomePage : Page
     {
+        private readonly ISitecoreAuthenticationService _sitecoreAuthenticationService;
+
         public WelcomePage()
         {
             this.InitializeComponent();
+            _sitecoreAuthenticationService = new SitecoreAuthenticationService();
         }
 
         private async void ContactLookUp_OnClick(object sender, RoutedEventArgs e)
@@ -27,15 +25,12 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             this.Frame.Navigate(typeof(VisitedAnimalsPage));
         }
 
-
         public async Task AuthenticateUser()
         {
             if (!string.IsNullOrEmpty(EmailAddress.Text))
             {
-                var sitecoreApi = new SitecoreAuthenticationService();
-
-                var authCookie = await sitecoreApi.AuthenticateAsync();
-                StoreAuthCookie(authCookie);
+                var authCookie = await _sitecoreAuthenticationService.AuthenticateAsync();
+                CurrentSession.StoreAuthCookie(authCookie);
             }
         }
 
@@ -43,27 +38,12 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
         {
             if (!string.IsNullOrEmpty(EmailAddress.Text))
             {
-                var authCookie = GetAuthCookie();
+                var authCookie = CurrentSession.LoadAuthCookie();
                 var personService = new SitecorePersonService(authCookie);
                 var person = await personService.GetUserDetailsAsync(EmailAddress.Text);
 
-                StorePerson(person);
+                CurrentSession.StorePerson(person);
             }
-        }
-
-        private void StoreAuthCookie(HttpCookie authCookie)
-        {
-            ((App)Application.Current).AuthCookie = authCookie;
-        }
-
-        private void StorePerson(Person person)
-        {
-            ((App)Application.Current).CurrentPerson = person;
-        }
-
-        private HttpCookie GetAuthCookie()
-        {
-            return ((App)Application.Current).AuthCookie;
         }
     }
 }
