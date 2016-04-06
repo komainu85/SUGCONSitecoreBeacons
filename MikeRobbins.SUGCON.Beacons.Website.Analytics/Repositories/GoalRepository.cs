@@ -4,6 +4,7 @@ using System.Web;
 using MikeRobbins.SUGCON.Beacons.Website.Analytics.Models;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Data;
+using Sitecore.Analytics.Tracking;
 using Sitecore.Services.Core;
 
 namespace MikeRobbins.SUGCON.Beacons.Website.Analytics.Repositories
@@ -24,19 +25,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Analytics.Repositories
                 Text = entity.GoalText
             };
 
-            if (!Tracker.IsActive)
-            {
-                Tracker.StartTracking();
-            }
-
-            var currentInteraction = Tracker.Current.Session.CreateInteraction();
-
-            currentInteraction.ChannelId = _kiosk;
-
-            Tracker.Current.Session.Identify(entity.ContactUniqueIdentifier);
-
-            var pageContext = currentInteraction.CreatePage();
-
+            var pageContext = CreateInteraction(entity);
             pageContext.Register(pageEventData);
         }
 
@@ -63,6 +52,22 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Analytics.Repositories
         public void Update(Goal entity)
         {
             throw new NotImplementedException();
+        }
+
+        private IPageContext CreateInteraction(Goal entity)
+        {
+            if (!Tracker.IsActive)
+            {
+                Tracker.StartTracking();
+            }
+
+            var currentInteraction = Tracker.Current.Session.CreateInteraction();
+            currentInteraction.ChannelId = _kiosk;
+
+            Tracker.Current.Session.Identify(entity.ContactUniqueIdentifier);
+
+            var pageContext = currentInteraction.CreatePage();
+            return pageContext;
         }
     }
 }

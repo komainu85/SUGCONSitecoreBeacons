@@ -188,7 +188,6 @@
   <ItemGroup>
     <Compile Include="Contracts\IMapper.cs" />
     <Compile Include="Controllers\PersonController.cs" />
-    <Compile Include="DataAccess\MediaLibrary.cs" />
     <Compile Include="Mapper.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Person.cs" />
@@ -203,6 +202,10 @@
     <Compile Include="Xdb\Query\PopulateWithVisitedAnimalsData.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MikeRobbins.SUGCON.Beacons.Website.ScAPI\MikeRobbins.SUGCON.Beacons.Website.ScAPI.csproj">
+      <Project>{0df3b041-678b-4eab-84f8-6f1894774e2e}</Project>
+      <Name>MikeRobbins.SUGCON.Beacons.Website.ScAPI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MikeRobbins.SUGCON.Beacons.Website.xDB\MikeRobbins.SUGCON.Beacons.Website.xDB.csproj">
       <Project>{3686bc97-fba6-4e31-bdcd-24bfbe60de59}</Project>
       <Name>MikeRobbins.SUGCON.Beacons.Website.xDB</Name>

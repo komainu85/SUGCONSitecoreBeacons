@@ -218,6 +218,10 @@
       <Project>{D73AA97C-04EA-438E-A798-490B5E0C4E14}</Project>
       <Name>MikeRobbins.SUGCON.Beacons.Website.Analytics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MikeRobbins.SUGCON.Beacons.Website.ScAPI\MikeRobbins.SUGCON.Beacons.Website.ScAPI.csproj">
+      <Project>{0DF3B041-678B-4EAB-84F8-6F1894774E2E}</Project>
+      <Name>MikeRobbins.SUGCON.Beacons.Website.ScAPI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MikeRobbins.SUGCON.Beacons.Website.xDBWebApi\MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.csproj">
       <Project>{7566f37e-585d-4f6b-9091-eec8cfaa763f}</Project>
       <Name>MikeRobbins.SUGCON.Beacons.Website.xDBWebApi</Name>

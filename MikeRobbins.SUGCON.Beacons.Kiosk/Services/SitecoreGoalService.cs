@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
+using Windows.System.Threading;
 using Windows.Web.Http;
 using Windows.Web.Http.Filters;
 using MikeRobbins.SUGCON.Beacons.Kiosk.Contracts;
@@ -19,6 +20,11 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
         }
 
         public async Task RegisterGoalAsync(Goal goal, string userUniqueIdentifier, string goalText)
+        {
+            await ThreadPool.RunAsync(async delegate { await RegisterGoalAsyncTask(goal, userUniqueIdentifier, goalText); });
+        }
+
+        private async Task RegisterGoalAsyncTask(Goal goal, string userUniqueIdentifier, string goalText)
         {
             var filter = new HttpBaseProtocolFilter();
 

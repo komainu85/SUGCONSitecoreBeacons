@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -15,7 +16,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
 
         public AnimalPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

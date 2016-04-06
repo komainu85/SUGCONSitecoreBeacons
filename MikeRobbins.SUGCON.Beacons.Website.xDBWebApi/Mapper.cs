@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MikeRobbins.SUGCON.Beacons.Website.Models;
+using MikeRobbins.SUGCON.Beacons.Website.ScAPI.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.xDB.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.xDB.Models;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Contracts;
-using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.DataAccess;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Models;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Xdb.Facets;
 using Sitecore.Analytics.Tracking;
@@ -14,12 +13,14 @@ namespace MikeRobbins.SUGCON.Beacons.Website.xDBWebApi
     public class Mapper : IMapper
     {
         private readonly IXdbFacetRepository _xdbFacetRepository;
-        private readonly MediaLibrary _mediaLibrary;
+        private readonly IMediaLibraryHelper _mediaLibraryHelper;
+        private readonly IItemHelper _itemHelper;
 
-        public Mapper(IXdbFacetRepository iXdbFacetRepository)
+        public Mapper(IXdbFacetRepository iXdbFacetRepository, IMediaLibraryHelper mediaLibraryHelper, IItemHelper itemHelper)
         {
             _xdbFacetRepository = iXdbFacetRepository;
-            _mediaLibrary = new MediaLibrary();
+            _mediaLibraryHelper = mediaLibraryHelper;
+            _itemHelper = itemHelper;
         }
 
         public Person MapContactToPerson(Contact contact)
@@ -31,7 +32,6 @@ namespace MikeRobbins.SUGCON.Beacons.Website.xDBWebApi
             var person = MapContactModelToPerson(contactModel);
 
             person.Id = contact.Identifiers.Identifier;
-
             person.Animals.AddRange(GetVisitedAnimals(contact));
 
             return person;
@@ -63,10 +63,12 @@ namespace MikeRobbins.SUGCON.Beacons.Website.xDBWebApi
 
             return zooVisit.VisitedAnimals.Select(animal => new Animal
             {
-                Date = animal.Date,
                 Id = animal.Id,
                 Name = animal.AnimalName,
-                ImageUrl = _mediaLibrary.GetImageUrl(animal.Id)
+                Date = animal.Date,
+
+                Description = _itemHelper.GetFieldText(animal.Id, "Description"),
+                ImageUrl = _mediaLibraryHelper.GetImageUrl("http://SUGCON/", animal.Id)
             });
         }
     }

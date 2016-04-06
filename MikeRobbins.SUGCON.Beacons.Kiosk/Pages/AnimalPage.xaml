@@ -21,6 +21,8 @@
                 <TextBlock Text="{x:Bind Animal.Name}" Style="{StaticResource TitleTextBlockStyle}" />
 
                 <Image Width="400" Source="{x:Bind Animal.Image }" HorizontalAlignment="Center"></Image>
+
+                <TextBlock Text="{x:Bind Animal.Description}" Style="{StaticResource ParagraphTextBlockStyle}" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

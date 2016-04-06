@@ -68,13 +68,9 @@ namespace MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Repositories
 
                 _xdbContactRepository.UpdateContact(contact, contactModel);
             }
-            else if (status == LockAttemptStatus.NotFound)
-            {
-                //Handle not found reporting
-            }
             else
             {
-                //Handle access errors
+                throw new ArgumentException("Person could not be updated");
             }
         }
 

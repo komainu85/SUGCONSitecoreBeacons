@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web;
-using MikeRobbins.SUGCON.Beacons.Website.Models;
 using MikeRobbins.SUGCON.Beacons.Website.xDB.Contracts;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Xdb.Elements;
 using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Xdb.Facets;

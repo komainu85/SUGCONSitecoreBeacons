@@ -149,7 +149,9 @@
     <Compile Include="Controllers\FlushSessionController.cs" />
     <Compile Include="Controllers\GoalController.cs" />
     <Compile Include="Models\Goal.cs" />
-    <Compile Include="Pipelines\EntityService\MakeEntityServicesSessionAware.cs" />
+    <Compile Include="Pipelines\EntityService\EntityServiceSession.cs" />
+    <Compile Include="Pipelines\EntityService\SessionControllerHandler.cs" />
+    <Compile Include="Pipelines\EntityService\SessionRouteHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GoalRepository.cs" />
   </ItemGroup>

@@ -1,5 +1,4 @@
-﻿using System.Web;
-using Sitecore.Analytics;
+﻿using Sitecore.Analytics;
 using Sitecore.Analytics.Model.Entities;
 using Sitecore.Mvc.Controllers;
 

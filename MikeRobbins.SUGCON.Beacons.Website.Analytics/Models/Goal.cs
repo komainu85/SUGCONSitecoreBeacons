@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Sitecore.Services.Core;
-using Sitecore.Services.Core.Model;
+﻿using Sitecore.Services.Core.Model;
 
 namespace MikeRobbins.SUGCON.Beacons.Website.Analytics.Models
 {

@@ -7,6 +7,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Entities
     {
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         public BitmapImage Image { get; set; }
 
         public void CreateBitmapImage(string imageUrl)

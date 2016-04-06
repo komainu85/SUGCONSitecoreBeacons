@@ -31,6 +31,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Data
                 var animal = new Animal()
                 {
                     Name = animals.GetObjectAt(i).GetNamedString("Name"),
+                    Description = animals.GetObjectAt(i).GetNamedString("Description"),
                 };
 
                 animal.CreateBitmapImage(animals.GetObjectAt(i).GetNamedString("ImageUrl"));

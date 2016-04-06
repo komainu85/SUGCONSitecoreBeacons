@@ -1,5 +1,4 @@
-﻿using MikeRobbins.SUGCON.Beacons.Website.xDB.Models;
-using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Models;
+﻿using MikeRobbins.SUGCON.Beacons.Website.xDBWebApi.Models;
 using Sitecore.Services.Core;
 using Sitecore.Services.Infrastructure.Sitecore.Services;
 
