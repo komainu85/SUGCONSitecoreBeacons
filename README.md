@@ -1,4 +1,4 @@
-# SUGCONSitecoreBeacons
+# SUGCON Sitecore Beacons
 
 ## Bluetooth Beacon
 
