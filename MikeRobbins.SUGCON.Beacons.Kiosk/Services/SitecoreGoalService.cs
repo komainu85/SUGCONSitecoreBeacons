@@ -58,7 +58,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 
         private static string GetGoalName(Goal goal)
         {
-            var goalName = string.Empty;
+            string goalName;
             switch (goal)
             {
                 case Goal.SponsorAnimal:
@@ -67,6 +67,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
                 case Goal.BuyToy:
                     goalName = "Buy Toy";
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(goal), goal, null);
             }
 
             return goalName;
@@ -74,7 +76,7 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
 
         private static string GetGoalId(Goal goal)
         {
-            var goalId = string.Empty;
+            string goalId;
             switch (goal)
             {
                 case Goal.SponsorAnimal:
@@ -83,6 +85,8 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Services
                 case Goal.BuyToy:
                     goalId = "{1904F50A-8FDA-4E5E-B7EF-3916DEAADC84}";
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(goal), goal, null);
             }
 
             return goalId;

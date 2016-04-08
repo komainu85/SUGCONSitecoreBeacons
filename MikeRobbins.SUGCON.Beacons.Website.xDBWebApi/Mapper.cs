@@ -67,7 +67,7 @@ namespace MikeRobbins.SUGCON.Beacons.Website.xDBWebApi
                 Name = animal.AnimalName,
                 Date = animal.Date,
 
-                Description = _itemHelper.GetFieldText(animal.Id, "Description"),
+                Description = _itemHelper.GetFieldText(animal.Id, "Body"),
                 ImageUrl = _mediaLibraryHelper.GetImageUrl("http://SUGCON/", animal.Id)
             });
         }
