@@ -13,11 +13,14 @@ namespace MikeRobbins.SUGCON.Beacons.Proxy
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+       
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                "Animal",
+                "animal/{animalId}",
+                new { controller = "Home", action = "Index" },
+                new { animalId = @"\w+" }
+             );
         }
     }
 }

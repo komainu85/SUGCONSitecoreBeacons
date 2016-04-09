@@ -9,16 +9,21 @@ namespace MikeRobbins.SUGCON.Beacons.Proxy.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(string redirectUrl)
+        public ActionResult Index(string animalId, string redirectUrl)
         {
-            redirectUrl = Server.HtmlEncode(redirectUrl);
+            var url = Server.UrlDecode(redirectUrl);
 
-            var redirectModel = GetRedirectModel(redirectUrl);
+            if (!url.ToLower().StartsWith("http://sugcon/"))
+            {
+                return new HttpStatusCodeResult(404);
+            }
+
+            var redirectModel = GetRedirectModel(animalId, url);
 
             return View(redirectModel);
         }
 
-        private static RedirectModel GetRedirectModel(string redirectUrl)
+        private static RedirectModel GetRedirectModel(string animalId, string redirectUrl)
         {
             var redirectModel = new RedirectModel
             {
@@ -26,25 +31,25 @@ namespace MikeRobbins.SUGCON.Beacons.Proxy.Controllers
                 Summary = "Find our more about our "
             };
 
-            switch (redirectUrl)
+            switch (animalId.ToLower())
             {
-                case "Tiger":
+                case "tiger":
                     redirectModel.Title = "Tiger";
                     redirectModel.Summary += "Tigers";
                     break;
-                case "Fox":
+                case "fox":
                     redirectModel.Title = "Fox";
                     redirectModel.Summary += "Fox";
                     break;
-                case "Giant Panda":
+                case "giantpanda":
                     redirectModel.Title = "Giant Panda";
                     redirectModel.Summary += "Giant Pandas";
                     break;
-                case "Snow Leopard":
+                case "snowleopard":
                     redirectModel.Title = "Snow Leopard";
                     redirectModel.Summary += "Snow Leopards";
                     break;
-                case "Eagle Owl":
+                case "eagleowl":
                     redirectModel.Title = "Eagle Owl";
                     redirectModel.Summary += "Eagle Owls";
                     break;

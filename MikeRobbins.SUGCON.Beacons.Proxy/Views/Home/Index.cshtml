@@ -1,5 +1,9 @@
 ﻿@model MikeRobbins.SUGCON.Beacons.Proxy.Models.RedirectModel
 
+@{
+    ViewBag.Title = @Model.Title;
+}
+
 <div class="jumbotron">
     <h1>@Model.Title</h1>
     <p class="lead">@Model.Summary</p>
