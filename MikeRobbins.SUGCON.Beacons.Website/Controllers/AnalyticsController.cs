@@ -15,18 +15,22 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
 
         private readonly Guid _animalVisit = new Guid("7C2CF41097C540F1B66D087DDDE62592");
 
+        private Guid? _campaignCode;
+
         public Guid? CampaignCode
         {
             get
             {
-                Guid camapignCode;
-
-                if (Guid.TryParse(Request.QueryString[AnalyticsSettings.CampaignQueryStringKey], out camapignCode))
+                if (_campaignCode == null)
                 {
-                    return camapignCode;
+                    Guid id;
+                    if (Guid.TryParse(Request.QueryString[AnalyticsSettings.CampaignQueryStringKey], out id))
+                    {
+                        _campaignCode = id;
+                    }
                 }
 
-                return null;
+                return _campaignCode;
             }
         }
 
@@ -48,7 +52,6 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
 
         private void CreateAnimalFacet()
         {
-            //Refactor this
             var facet = _xdbFacetRepository.GetFacet<IZooVisitFacet>(Tracker.Current.Contact, "ZooVisit");
 
             var visitedAnimalElement = facet.VisitedAnimals.Create();
@@ -56,7 +59,6 @@ namespace MikeRobbins.SUGCON.Beacons.Website.Controllers
             visitedAnimalElement.Id = Sitecore.Context.Item.ID;
             visitedAnimalElement.AnimalName = Sitecore.Context.Item["Title"];
             visitedAnimalElement.Date = DateTime.Now;
-
         }
     }
 }
