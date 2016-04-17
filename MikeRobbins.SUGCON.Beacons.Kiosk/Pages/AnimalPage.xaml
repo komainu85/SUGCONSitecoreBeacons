@@ -22,7 +22,7 @@
 
                 <Image Source="{x:Bind Animal.Image }" HorizontalAlignment="Stretch"></Image>
 
-                <TextBlock Text="{x:Bind Animal.Description}" Style="{StaticResource ParagraphTextBlockStyle}" />
+                <WebView Name="Description" HorizontalAlignment="Stretch" Height="300" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

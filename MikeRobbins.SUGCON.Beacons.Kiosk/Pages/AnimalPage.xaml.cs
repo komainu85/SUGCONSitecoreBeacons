@@ -24,6 +24,15 @@ namespace MikeRobbins.SUGCON.Beacons.Kiosk.Pages
             base.OnNavigatedTo(e);
 
             Animal = (Animal)e.Parameter;
+
+            SetDescriptionHtml();
+        }
+
+        private void SetDescriptionHtml()
+        {
+            var html = "<html><body>" + Animal.Description + "</body></html>";
+
+            Description.NavigateToString(html);
         }
 
         private async void SponsorAnimal_OnClick(object sender, RoutedEventArgs e)
